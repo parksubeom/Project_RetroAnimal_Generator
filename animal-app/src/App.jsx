@@ -1,10 +1,17 @@
 import React from 'react';
 import './App.css';
+import Title from './component/Title'
+import ViewSection from './component/ViewSection'
+import SelectButton from './component/SelectButton'
+import Manual from './component/Manual'
 
 function App() {
   return (
     <div className="App">
-      asdsasdasddas
+      <Title />
+      <ViewSection />
+      <SelectButton />
+      <Manual />
     </div>
   );
 }
