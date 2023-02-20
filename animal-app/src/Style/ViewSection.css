@@ -1,0 +1,19 @@
+.ViewSection{
+    position:relative;
+    width:500px;
+    height:500px;
+    border: solid 5px rgb(78, 172, 128);
+}
+
+.faceimg{
+    top:0px;
+    left:0px;
+    position:absolute;
+    width:400px;
+    height:400px;
+}
+
+img {
+    width:450px;
+    height:450px;
+}

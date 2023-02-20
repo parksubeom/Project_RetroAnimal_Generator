@@ -2,9 +2,10 @@ import '../Style/Title.css';
 import React, {useState} from 'react';
 
 function Title() {
+  
     return (
       <div className="Title">
-       나와주세요
+      나는 타이틀 컴포넌트
       </div>
     );
   }
