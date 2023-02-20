@@ -1,6 +1,7 @@
 module.exports.Options = [
     {faceselect :
-        [{key:0, value:"강아지"},
+        [
+        {key:0, value:"강아지"},
         {key:1, value:"강아지(큰 귀))"},
         {key:2, value:"강아지(접힌 귀)"},
         {key:3, value:"고양이(접힌 귀)"},
@@ -12,7 +13,8 @@ module.exports.Options = [
     }
     ,
     {colorselect :
-        [{key:1, value:"베이지"},
+        [
+        {key:1, value:"베이지"},
         {key:2, value:"살구"},
         {key:3, value:"아이보리"},
         {key:4, value:"화이트"},
@@ -31,7 +33,7 @@ module.exports.Options = [
     }
     ,
     {eyesselect : 
-        [{key:0, value:"순정만화눈"},
+        [
         {key:1, value:"맑은눈"},
         {key:2, value:"화난눈"},
         {key:3, value:"점눈(큰)"},
@@ -43,12 +45,11 @@ module.exports.Options = [
         {key:9, value:"감은눈(기본)"},
         {key:10, value:"질끈눈"},
         {key:11, value:"골뱅이눈"},
-        {key:12, value:"올망눈"},
-        {key:13, value:"진완님눈"},]
+        {key:12, value:"올망눈"}]
     }
     ,
-    {mouthsselect : 
-        [{key:0, value:"이빨입(송곳니)"},
+    {mouthselect : 
+        [
         {key:1, value:"이빨입(기본)"},
         {key:2, value:"닫은입(작은)"},
         {key:3, value:"닫은입(기본)"},
@@ -58,10 +59,39 @@ module.exports.Options = [
         {key:7, value:"놀란입(큰)"},
         {key:8, value:"면접광탈입"},
         {key:9, value:"흡연(말보로)"},
-        {key:10, value:"메롱입"},
-        {key:11, value:"먹는입"}
-        ]
+        {key:10, value:"메롱입"}]
     }
+    ,
+    {accselect : 
+        [ 
+        {key:2, value:"동글이 안경"},
+        {key:3, value:"모노클"},
+        {key:4, value:"하와이안 꽃"},
+        {key:5, value:"MIC"},
+        {key:6, value:"땀땀"},
+        {key:7, value:"열받음"},
+        {key:8, value:"하트하트"},
+        {key:9, value:"수면안대"},
+        {key:10, value:"셜록모자"},
+        {key:11, value:"빨간리본"},
+        {key:12, value:"뿌애애앵 "},
+        {key:13, value:"반짝이는 눈"},
+        {key:14, value:"버버리마스크"}]
+    }
+    ,
+    {patternselect : [
+        {key:1, value:"칼자국 흉터"},
+        {key:2, value:"발그레"},
+        {key:3, value:"범피스트"},
+        {key:4, value:"해리포터 번개"},
+        {key:5, value:"사고뭉치"},
+        {key:6, value:"주근깨"},         
+    ]
+}
+
+       
+
+
     
 ]
 

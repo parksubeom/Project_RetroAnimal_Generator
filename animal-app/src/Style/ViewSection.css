@@ -11,6 +11,40 @@
     position:absolute;
     width:400px;
     height:400px;
+    
+}
+
+.eyeimg{
+    top:0px;
+    left:0px;
+    position:absolute;
+    width:400px;
+    height:400px;
+}
+
+.mouthimg{
+    top:0px;
+    left:0px;
+    position:absolute;
+    width:400px;
+    height:400px;
+}
+
+.accimg{
+    top:0px;
+    left:0px;
+    position:absolute;
+    width:400px;
+    height:400px;
+}
+
+.edgecase{
+    top:0px;
+    left:0px;
+    position:absolute;
+    width:400px;
+    height:400px;
+    z-index: 9999;
 }
 
 img {
