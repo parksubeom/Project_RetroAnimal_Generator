@@ -13,7 +13,7 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
 
   const allrandomBtn =() => {
     console.log("올 랜덤버튼 눌렸다")
-    setRandomFace(Math.round(Math.random() * 9))
+    setRandomFace(Math.floor(Math.random() * 8))
     setRandomColor(Math.round(Math.random() * 12))
     setRandomEyes(Math.round(Math.random() * 12))
     setRandomMouth(Math.round(Math.random() * 7))
