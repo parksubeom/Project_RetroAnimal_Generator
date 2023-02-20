@@ -46,7 +46,22 @@ module.exports.Options = [
         {key:12, value:"올망눈"},
         {key:13, value:"진완님눈"},]
     }
-
+    ,
+    {mouthsselect : 
+        [{key:0, value:"이빨입(송곳니)"},
+        {key:1, value:"이빨입(기본)"},
+        {key:2, value:"닫은입(작은)"},
+        {key:3, value:"닫은입(기본)"},
+        {key:4, value:"웃는입(작은)"},
+        {key:5, value:"웃는입(큰)"},
+        {key:6, value:"놀란입(작은)"},
+        {key:7, value:"놀란입(큰)"},
+        {key:8, value:"면접광탈입"},
+        {key:9, value:"흡연(말보로)"},
+        {key:10, value:"메롱입"},
+        {key:11, value:"먹는입"}
+        ]
+    }
     
 ]
 

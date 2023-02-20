@@ -8,7 +8,7 @@ function ViewSection({randomface,randomcolor,randomeyes,randommouth,randomacc,ra
 
   let faceurl = `./img/face/face${randomface}/color${randomcolor}.png`
   let eyesurl = `./img/eye/eye${randomeyes}.png`
-  let mouthurl = `./img/mouth/mouth-${randommouth}.png`
+  let mouthurl = `./img/mouth/mouth${randommouth}.png`
     return (
       <div>
         <div className="ViewSection">
