@@ -33,7 +33,7 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
     setRandomColor(Math.round(Math.random() * 17))
     setRandomEyes(Math.round(Math.random() * 13))
     setRandomMouth(Math.round(Math.random() * 11))
-    setRandomAcc(Math.round(Math.random() * (15-1))+1)
+    setRandomAcc(Math.round(Math.random() * (29-1))+1)
     setRandomPattern(Math.round(Math.random() * (6-1))+1)
     setRandombackground(Math.round(Math.random() * 19))
   }
@@ -59,7 +59,7 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
 
   const randomAccBtn = (e) => {
     console.log("악세서리 랜덤버튼 눌렸다")
-    setRandomAcc(Math.round(Math.random() * (15-1))+1)
+    setRandomAcc(Math.round(Math.random() * (29-1))+1)
   }
 
   const randomPatternBtn = (e) => {

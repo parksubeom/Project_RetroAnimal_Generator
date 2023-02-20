@@ -65,9 +65,10 @@ module.exports.Options = [
     {accselect : 
         [ 
         {key:0, value:"악세서리x"},
+        {key:1, value:"하와이안 꽃"},
         {key:2, value:"동글이 안경"},
         {key:3, value:"모노클"},
-        {key:4, value:"하와이안 꽃"},
+        {key:4, value:"썬글라스"},
         {key:5, value:"MIC"},
         {key:6, value:"땀땀"},
         {key:7, value:"열받음"},
@@ -77,7 +78,24 @@ module.exports.Options = [
         {key:11, value:"빨간리본"},
         {key:12, value:"뿌애애앵 "},
         {key:13, value:"반짝이는 눈"},
-        {key:14, value:"버버리마스크"}]
+        {key:14, value:"짜바게티 요리사"},
+        {key:15, value:"버버리마스크"},
+        {key:16, value:"제주감귤"},
+        {key:17, value:"나뭇잎 하나"},
+        {key:18, value:"큰나뭇잎 하나"},
+        {key:19, value:"식사준비완료"},
+        {key:20, value:"사슴"},
+        {key:21, value:"유니콘"},
+        {key:22, value:"반창고"},
+        {key:23, value:"반창고2"},
+        {key:24, value:"열이나요"},
+        {key:25, value:"칼들기"},
+        {key:26, value:"악마"},
+        {key:27, value:"천사"},
+        {key:28, value:"화관"},
+        {key:29, value:"다들집중!"},
+        
+    ]
     }
     ,
     {patternselect : [
