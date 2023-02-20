@@ -3,10 +3,10 @@ import React, {useState} from 'react';
 
 
 function ViewSection({randomface,randomcolor,randomeyes,randommouth,randomacc,randompattern}) {
-  console.log(randomface)
-  console.log(randomeyes)
+  
 
-  let faceurl = `./img/face/face${randomface}/face-${randomface}.png`
+
+  let faceurl = `./img/face/face${randomface}/color${randomcolor}.png`
   let eyesurl = `./img/eye/eye${randomeyes}.png`
   let mouthurl = `./img/mouth/mouth-${randommouth}.png`
     return (
@@ -15,6 +15,7 @@ function ViewSection({randomface,randomcolor,randomeyes,randommouth,randomacc,ra
           <div className="faceimg"><img alt="face_" src={faceurl}/></div>
           <div className="faceimg"><img alt="eyes_" src={eyesurl}/></div>
           <div className="faceimg"><img alt="mouth_" src={mouthurl}/></div>  
+           
         </div>
       </div>
       

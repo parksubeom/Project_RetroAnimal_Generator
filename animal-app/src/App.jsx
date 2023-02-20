@@ -8,20 +8,14 @@ import  ViewSection  from './component/ViewSection.jsx';
 
 function App() {
 //App컴포넌트는 각 컴포넌트로 부터 값을 받아와서 다시 뿌려주는 허브역할을 해야한다.
-  const [randomface, setRandomFace] = useState('')
-  const [randomcolor, setRandomColor] = useState('')
-  const [randomeyes, setRandomEyes] = useState('')
-  const [randommouth, setRandomMouth] = useState('')
-  const [randomacc, setRandomAcc] = useState('')
-  const [randompattern, setRandomPattern] = useState('')
+  const [randomface, setRandomFace] = useState('0')
+  const [randomcolor, setRandomColor] = useState('1')
+  const [randomeyes, setRandomEyes] = useState('3')
+  const [randommouth, setRandomMouth] = useState('6')
+  const [randomacc, setRandomAcc] = useState('1')
+  const [randompattern, setRandomPattern] = useState('1')
 
-  
   console.log(randomface)
-  console.log(randomcolor)
-  console.log(randomeyes)
-  console.log(randommouth)
-  console.log(randomacc)
-  console.log(randompattern)
 
   return (
     <div className="App">
