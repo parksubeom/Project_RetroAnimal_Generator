@@ -64,6 +64,7 @@ module.exports.Options = [
     ,
     {accselect : 
         [ 
+        {key:0, value:"악세서리x"},
         {key:2, value:"동글이 안경"},
         {key:3, value:"모노클"},
         {key:4, value:"하와이안 꽃"},
@@ -80,14 +81,33 @@ module.exports.Options = [
     }
     ,
     {patternselect : [
+        {key:0, value:"무늬x"},
         {key:1, value:"칼자국 흉터"},
         {key:2, value:"발그레"},
         {key:3, value:"범피스트"},
         {key:4, value:"해리포터 번개"},
         {key:5, value:"사고뭉치"},
-        {key:6, value:"주근깨"},         
-    ]
-}
+        {key:6, value:"주근깨"}]
+        
+    }
+    ,
+    {backgroundselect : [
+        {key:1, value:"블랙"},
+        {key:2, value:"레드"},
+        {key:3, value:"옐로우"},
+        {key:4, value:"피치"},
+        {key:5, value:"바이올렛"},
+        {key:6, value:"스카이블루"},
+        {key:7, value:"민트"},
+        {key:8, value:"핫핑크"},
+        {key:9, value:"그린티"},
+        {key:10, value:"제주감귤"},
+        {key:11, value:"짙은차콜"},
+        {key:12, value:"아이보리"},
+        {key:13, value:"코발트블루"},
+        
+    ]}
+
 
        
 

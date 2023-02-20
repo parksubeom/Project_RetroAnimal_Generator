@@ -10,13 +10,14 @@ const {Options} = require('./selectData')
 
 
 
-function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth,setRandomAcc,setRandomPattern}) {
+function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth,setRandomAcc,setRandomPattern,setRandombackground}) {
   const [faceSelect, setFaceSelect] = useState();
   const [colorSelect, setColorSelect] = useState(1);
   const [eyesSelect, setEyesSelect] = useState(1);
   const [mouthSelect, setMouthSelect] = useState(1);
   const [accSelect, setAccSelect] = useState(1);
-  const [patternSelect, setPatternSelect] = useState(1);
+  const [patternSelect, setPatternSelect] = useState(1)
+  const [backgroundSelect, setBackgroundSelect] = useState(1);
   
   const faceOptions = Options[0]
   const colorOptions = Options[1]
@@ -24,34 +25,36 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
   const mouthOptions = Options[3]
   const accOptions = Options[4]
   const patternOptions = Options[5]
+  const backgroundOptions = Options[6]
 
   const allrandomBtn =() => {
     console.log("올 랜덤버튼 눌렸다")
-    setRandomFace(Math.floor(Math.random() * 9))
-    setRandomColor(Math.round(Math.random() * (17-1))+1)
-    setRandomEyes(Math.round(Math.random() * (13-1))+1)
-    setRandomMouth(Math.round(Math.random() * (11-1))+1)
+    setRandomFace(Math.round(Math.random() * 8))
+    setRandomColor(Math.round(Math.random() * 17))
+    setRandomEyes(Math.round(Math.random() * 13))
+    setRandomMouth(Math.round(Math.random() * 11))
     setRandomAcc(Math.round(Math.random() * (15-1))+1)
     setRandomPattern(Math.round(Math.random() * (6-1))+1)
+    setRandombackground(Math.round(Math.random() * 19))
   }
 
   const randomFaceBtn = (e) => {
     console.log("얼굴 랜덤버튼 눌렸다")
-    setRandomFace(Math.floor(Math.random() * 9))
+    setRandomFace(Math.floor(Math.random() * 8))
   }
 
   const randomColorBtn = (e) => {
     console.log("얼굴 컬러 랜덤버튼 눌렸다")
-    setRandomColor(Math.round(Math.random() * (17-1))+1)
+    setRandomColor(Math.round(Math.random() * 17))
   }
   const randomEyesBtn = (e) => {
     console.log("눈 랜덤버튼 눌렸다")
-    setRandomEyes(Math.round(Math.random() * (13-1))+1)
+    setRandomEyes(Math.round(Math.random() * 13))
   }
 
   const randomMouthBtn = (e) => {
     console.log("입  랜덤버튼 눌렸다")
-    setRandomMouth(Math.round(Math.random() * (11-1))+1)
+    setRandomMouth(Math.round(Math.random() * 11))
   }
 
   const randomAccBtn = (e) => {
@@ -62,7 +65,13 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
   const randomPatternBtn = (e) => {
     console.log("무늬 랜덤버튼 눌렸다")
     setRandomPattern(Math.round(Math.random() * (6-1))+1)
-    console.log(Options[1])
+    
+  }
+
+  const randomBackgroundBtn = (e) => {
+    console.log("배경 랜덤버튼 눌렸다")
+    setRandombackground(Math.round(Math.random() * 19))
+    
   }
 //==========================랜덤버튼함수==========================//
 
@@ -100,12 +109,19 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
     setRandomPattern(e.target.value)
   }
 
+  const backgroundselectBtn = (e) => {
+    console.log("무늬 선택버튼버튼 눌렸다")
+    setBackgroundSelect(e.currentTarget.value)
+    setRandombackground(e.target.value)
+  }
+
   return (
     <div className="SelectButton">
       <div>
       <button type='button' value='button' id='allrandom' onClick={allrandomBtn}>올 랜덤</button>
       </div>
       <div>
+        <button type='button' value='button' id='random' onClick={randomBackgroundBtn}>배경 랜덤</button>
         <button type='button' value='button' id='random' onClick={randomFaceBtn}>얼굴랜덤</button>
         <button type='button' value='button' id='random' onClick={randomColorBtn}>얼굴컬러랜덤</button>
         <button type='button' value='button' id='random' onClick={randomEyesBtn}>눈 랜덤</button>
@@ -157,6 +173,14 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
       <div>
         <select className='pattern_select' onChange={patternselectBtn} value={patternSelect}>
                   {patternOptions.patternselect.map((item, index)=>(
+                <option key={item.key} value={item.key}>{item.value}</option>
+              ))}
+        </select>
+      </div>
+
+      <div>
+        <select className='background_select' onChange={backgroundselectBtn} value={backgroundSelect}>
+                  {backgroundOptions.backgroundselect.map((item, index)=>(
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
         </select>

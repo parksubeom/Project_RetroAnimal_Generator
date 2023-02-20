@@ -12,10 +12,11 @@ function App() {
   const [randomcolor, setRandomColor] = useState('1')
   const [randomeyes, setRandomEyes] = useState('3')
   const [randommouth, setRandomMouth] = useState('6')
-  const [randomacc, setRandomAcc] = useState('1')
-  const [randompattern, setRandomPattern] = useState('1')
+  const [randomacc, setRandomAcc] = useState('0')
+  const [randompattern, setRandomPattern] = useState('0')
+  const [randombackground, setRandombackground] = useState('12')
 
-  console.log(randomface)
+ 
 
   return (
     <div className="App">
@@ -24,11 +25,11 @@ function App() {
       </div>
 
       <section className="view_container">
-        <ViewSection randomface ={randomface} randomcolor ={randomcolor} randomeyes = {randomeyes} randommouth = {randommouth} randomacc = {randomacc} randompattern = {randompattern}/>
+        <ViewSection randomface ={randomface} randomcolor ={randomcolor} randomeyes = {randomeyes} randommouth = {randommouth} randomacc = {randomacc} randompattern = {randompattern} randombackground = {randombackground}/>
       </section>
 
       <section className="btnsection_container">
-        <SelectButton setRandomFace = {setRandomFace} setRandomColor = {setRandomColor} setRandomEyes = {setRandomEyes} setRandomMouth = {setRandomMouth} setRandomAcc = {setRandomAcc} setRandomPattern = {setRandomPattern}/>
+        <SelectButton setRandomFace = {setRandomFace} setRandomColor = {setRandomColor} setRandomEyes = {setRandomEyes} setRandomMouth = {setRandomMouth} setRandomAcc = {setRandomAcc} setRandomPattern = {setRandomPattern} setRandombackground = {setRandombackground}/>
       </section>
 
       <div>

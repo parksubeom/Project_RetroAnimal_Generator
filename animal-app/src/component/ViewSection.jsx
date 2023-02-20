@@ -2,10 +2,11 @@ import '../Style/ViewSection.css';
 import React, {useState,useRef} from 'react';
 
 
-function ViewSection({randomface,randomcolor,randomeyes,randommouth,randomacc,randompattern}) {
+function ViewSection({randomface,randomcolor,randomeyes,randommouth,randomacc,randompattern,randombackground}) {
 
 console.log(randomacc)
-console.log(randommouth)
+console.log(randombackground)
+let backgroundurl = `./img/background/background${randombackground}.png`
   let faceurl = `./img/face/face${randomface}/color${randomcolor}.png`
   let eyesurl = `./img/eye/eye${randomeyes}.png`
   let mouthurl = `./img/mouth/mouth${randommouth}.png`
@@ -16,11 +17,13 @@ console.log(randommouth)
     return (
       <div>
         <div className="ViewSection">
+          <div className="backimg"><img alt="face_" src={backgroundurl}/></div>
           <div className="faceimg"><img alt="face_" src={faceurl}/></div>
+          <div className="patternimg"><img alt="pattern_" src={patternurl}/></div> 
           <div className="eyeimg"><img alt="eyes_" src={eyesurl}/></div>         
           <div className="mouthimg"><img alt="mouth_" src={mouthurl}/></div> 
           <div className="accimg"><img alt="acc_" src={accurl}/></div> 
-          <div className="patternimg"><img alt="pattern_" src={patternurl}/></div>   
+            
         
         </div>
       </div>
