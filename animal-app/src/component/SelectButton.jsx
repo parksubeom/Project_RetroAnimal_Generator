@@ -188,6 +188,7 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
       </div>
     </div>
   );
+
 }
 
 export default SelectButton;

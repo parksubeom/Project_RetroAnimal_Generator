@@ -31,3 +31,4 @@ let backgroundurl = `./img/background/background${randombackground}.png`
   }
   
   export default ViewSection;
+
