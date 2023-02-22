@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '../Style/SelectButton.css';
 import React, { useState } from 'react';
 const {Options} = require('./selectData')
@@ -194,6 +195,19 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
     
     </div>
   );
+=======
+import React from 'react';
+import '../Style/SelectButton.css'
+
+function SelectButton() {
+
+
+    return (
+        <div>
+            잘 나오나
+        </div>
+    );
+>>>>>>> origin/main
 }
 
 export default SelectButton;

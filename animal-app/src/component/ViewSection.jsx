@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '../Style/ViewSection.css';
 import React, {useState,useRef} from 'react';
 
@@ -32,3 +33,18 @@ let backgroundurl = `./img/background/background${randombackground}.png`
   }
   
   export default ViewSection;
+=======
+import React from 'react';
+import '../Style/ViewSection.css'
+function ViewSection() {
+
+
+    return (
+        <div>
+            중입니다.
+        </div>
+    );
+}
+
+export default ViewSection;
+>>>>>>> origin/main

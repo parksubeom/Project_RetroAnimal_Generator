@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '../Style/Title.css';
 import React, {useState} from 'react';
 
@@ -11,3 +12,17 @@ function Title() {
   }
   
   export default Title;
+=======
+import React from 'react';
+import '../Style/Title.css'
+function Title() {
+
+    return (
+        <div>
+            테스트
+        </div>
+    );
+}
+
+export default Title;
+>>>>>>> origin/main
