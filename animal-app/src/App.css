@@ -18,10 +18,12 @@
   width: 500px;
   height: 500px;
   border: solid 1px red;
+
 }
 
 .btnsection_container {
   width:500px;
   height:200px;
   border: solid 1px rgb(51, 231, 51);
+  
 }

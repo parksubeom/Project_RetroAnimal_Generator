@@ -105,6 +105,7 @@ function SelectButton({setRandomFace,setRandomColor,setRandomEyes,setRandomMouth
   }
   const patternselectBtn = (e) => {
     console.log("무늬 선택버튼버튼 눌렸다")
+    
     setPatternSelect(e.currentTarget.value)
     setRandomPattern(e.target.value)
   }

@@ -1,5 +1,4 @@
 import '../Style/ViewSection.css';
-import React, {useState,useRef} from 'react';
 
 
 function ViewSection({randomface,randomcolor,randomeyes,randommouth,randomacc,randompattern,randombackground}) {
