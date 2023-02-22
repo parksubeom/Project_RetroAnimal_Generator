@@ -94,6 +94,7 @@ module.exports.Options = [
         {key:27, value:"천사"},
         {key:28, value:"화관"},
         {key:29, value:"다들집중!"},
+        {key:30, value:"플렉스"}
         
     ]
     }
