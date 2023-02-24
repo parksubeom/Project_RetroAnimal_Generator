@@ -51,12 +51,30 @@
     
 }
 
-.modal_section >.modal_view > h2{
-    
+.modal_section >.modal_view>h2{
+    margin-top: -20px;
+    margin-bottom: 20px;
     color : #f7f1f1;
     text-align: center;
     text-shadow: -1px 0 #000, 0 3px #000, 4px 0 #000, 0 -1px #000;
-    font-size : 25px;
+    font-size : 28px;
 }
+
+.modal_section >.modal_view > .modal_text{
+    
+    color : #2c2b2b;
+    text-align: center;
+    font-size : 17px;
+    word-break: keep-all;
+}
+
+.modal_section >.modal_view > .modal_bottom_text{
+    font-family:'maple';
+    color : antiquewhite;
+    text-align: center;
+    font-size : 17px;
+    word-break: keep-all;
+}
+
 
 

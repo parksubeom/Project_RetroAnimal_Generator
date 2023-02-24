@@ -58,7 +58,7 @@ module.exports.Options = [
         {key:6, value:"놀란입(작은)"},
         {key:7, value:"놀란입(큰)"},
         {key:8, value:"면접광탈입"},
-        {key:9, value:"흡연(말보로)"},
+        {key:9, value:"과자먹는입"},
         {key:10, value:"메롱입"}]
     }
     ,
