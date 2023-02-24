@@ -14,7 +14,7 @@ function App() {
   const [randommouth, setRandomMouth] = useState('10')
   const [randomacc, setRandomAcc] = useState('24')
   const [randompattern, setRandomPattern] = useState('0')
-  const [randombackground, setRandombackground] = useState('1')
+  const [randombackground, setRandombackground] = useState('12')
 
 
 

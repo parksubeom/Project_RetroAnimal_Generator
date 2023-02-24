@@ -32,7 +32,7 @@
 
 .modal_totalview >.modal_topview {
     padding: 40px;
-    background-color: antiquewhite;
+    background-color: #fbeddc;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@
 }
 
 .textcolor{
-    color :  antiquewhite;
+    color :  #fbeddc;
 }
 
 .modal_icon {
@@ -86,7 +86,7 @@
     border:3px solid black;
     border-radius:15px;
     padding: 10px 40px;
-    background-color: antiquewhite;;
+    background-color: #fbeddc;
     color : #2c2b2b;
     text-align: center;
     font-size : 17px;

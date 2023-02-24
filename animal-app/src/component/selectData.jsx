@@ -110,8 +110,7 @@ module.exports.Options = [
         
     }
     ,
-    {backgroundselect : [
-        {key:1, value:"블랙"},
+    {backgroundselect : [       
         {key:2, value:"레드"},
         {key:3, value:"옐로우"},
         {key:4, value:"피치"},

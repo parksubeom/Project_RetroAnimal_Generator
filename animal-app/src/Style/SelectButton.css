@@ -2,31 +2,56 @@
 
     width: 100%;
     height: auto;
-    
+
 }
 .Button_group{
     display: flex;
     justify-content: center;
     align-content: center;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
 }
 
 .randomBtn_Design{
 
-    width: 100px;
-    height: 40px;
-    margin-right: 20px;
+    width: 70px;
+    height: 30px;
+    margin-right: 10px;
     border-radius: 10px;
-    color:#5475b3;
-    border: 1px solid #bccde4;
-    background-color: #e7f1ff;
+    color:#3b342f;
+    border: 3px solid #3b342f;
+    background-color: #bb8767;
     font-weight: 600;
-    transition: all ease-in-out 0.2s;
+}
+
+.randomBtn_Design::before{
+
+    position: absolute;
+    top:5px;
+    width: 70px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color:#3b342f;
+    border: 3px solid red;
+    background-color: #bb8767;
+    font-weight: 600;
+    z-index: 999;
 }
 
 .randomBtn_Design:hover{
-    border-color: #5475b3;
-    background-color: #5475b3;
-    color:#fff;
+    background-color: #eba75e;
+    color:#99501b;
+}
+
+.selectBtn_Design{
+
+    width: 160px;
+    height: 30px;
+    border: 2px solid #746655;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: #746655;
+
 }
