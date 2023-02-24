@@ -1,30 +1,115 @@
+@font-face {
+  font-family:'maple';
+  src: url('../public/Maplestory\ Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family:'cookie';
+  src: url('../public/CookieRunFont_TTF/CookieRun\ Black.ttf') format('truetype');
+}
 
-*{
+* {
   margin: 0;
   padding: 0;
-  
+  font-family: maple;
+  font-family: maple;
 }
+
+
+li {
+  list-style: none;
+}
+
+button {
+  border-style: none;
+  background-color: rgb(0, 0, 0, 0);
+}
+
+select {
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: #ccc;
+  color: #666;
+}
+
 
 .App {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: var(--backgroundcolor);
-  width: 100vw;
-  height: 100vh;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-image: url('https://i.imgur.com/SJiByoL.png%27');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.view_container {
-  width: 500px;
-  border: solid 1px red;
+
+
+
+.section_AllBox{
+
+  width: 400px;
+  height: auto;
+  margin-top: -100%;
+  animation: moving 2.3s forwards;
+}
+
+@keyframes moving {
+
+  70%{ margin-top: 0px; }
+  100%{ margin-top: -100px; }
 
 }
 
-.btnsection_container {
-  width:500px;
-  border: solid 1px rgb(51, 231, 51);
+.section_top{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: 400px;
+  width: 25%;
+  height: 300px;
 }
 
+.section_top>div{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 100%;
+}
+
+.section_top>div:nth-child(1){left: 15px;}
+.section_top>div:nth-child(2){right: 8px;}
+
+.design_Top_Line{
+  position: absolute;
+  margin-top: -10px;
+  width: 8px;
+  height: 100%;
+  background-color: #fff8f0;
+  border:4px solid #453931;
+  border-radius: 20px;
   
+}
 
+.design_Top_Dot{
+  position: absolute;
+  bottom: -9px;
+  width: 25px;
+  height: 25px;
+  background-color: #453931;
+  border-radius: 20px;
+ 
+}
+
+.contants_AllBox {
+  margin-top: -30px;
+  min-width: 400px;
+  width: 25%;
+  background: #fbeddc;
+  border-radius: 20px;
+  border:4px solid #453931;
+}
