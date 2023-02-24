@@ -1,0 +1,35 @@
+
+
+
+.btn_allBox{
+
+    width: 100%;
+    height: auto;
+
+}
+.Button_group{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.randomBtn_Design{
+
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+    color:#5475b3;
+    border: 1px solid #bccde4;
+    background-color: #e7f1ff;
+    font-weight: 600;
+    transition: all ease-in-out 0.2s;
+}
+
+.randomBtn_Design:hover{
+    border-color: #5475b3;
+    background-color: #5475b3;
+    color:#fff;
+}
