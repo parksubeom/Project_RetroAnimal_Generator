@@ -5,7 +5,7 @@ function Title() {
   
     return (
       <div className="Title">
-      나는 타이틀 컴포넌트
+        <img src= 'https://i.imgur.com/roehYfr.png'/>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import '../Style/SelectButton.css';
 import React, { useState } from 'react';
+
 const { Options } = require('./selectData')
 //셀렉트 버튼을 누르면  온클릭이벤트가 실행되고 해당버튼에 고유한 값을 앱컴포넌트로 올려줘야한다.
 //랜덤버튼을 누르면 온클릭이벤트가 실행되고, Matr.round(Matr.rendom)*10 메서드를 실행해서 나온 정수값을 state값에 넣어준다.
@@ -15,6 +16,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const [patternSelect, setPatternSelect] = useState(1)
   const [backgroundSelect, setBackgroundSelect] = useState(1);
 
+
+
   const faceOptions = Options[0]
   const colorOptions = Options[1]
   const eyesOptions = Options[2]
@@ -22,6 +25,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const accOptions = Options[4]
   const patternOptions = Options[5]
   const backgroundOptions = Options[6]
+
+
 
   const allrandomBtn = () => {
     console.log("올 랜덤버튼 눌렸다")
@@ -44,6 +49,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomColor(Math.round(Math.random() * 17))
   }
   const randomEyesBtn = (e) => {
+
     console.log("눈 랜덤버튼 눌렸다")
     setRandomEyes(Math.round(Math.random() * 13))
   }
@@ -66,7 +72,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
   const randomBackgroundBtn = (e) => {
     console.log("배경 랜덤버튼 눌렸다")
-    setRandombackground(Math.round(Math.random() * (19-1))+1)
+    setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
 
   }
   //==========================랜덤버튼함수==========================//
@@ -113,6 +119,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   }
 
   return (
+
     <div className="btn_allBox">
 
       <div className='Button_group'>
@@ -170,7 +177,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       </div>
 
       <div className='Button_group'>
-        <button type='button' value='button' className='randomBtn_Design' onClick={randomBackgroundBtn}>배경랜덤</button>
+        <button type='button' value='button' className='randomBtn_Design' onClick={randomBackgroundBtn}>배경 랜덤</button>
         <select className='selectBtn_Design' onChange={backgroundselectBtn} value={backgroundSelect}>
           {backgroundOptions.backgroundselect.map((item, index) => (
             <option key={item.key} value={item.key}>{item.value}</option>
@@ -178,8 +185,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
         </select>
       </div>
       <div className='Button_group'>
-        <button type='button' value='button' className='randomBtn_Design' onClick={allrandomBtn}>올 랜덤</button>
-        <button type='button' value='button' className='randomBtn_Design' onClick={allrandomBtn}>프로필생성</button>
+        <button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button>
+        <button type='button' value='button' className='CreateProfile_Design' onClick={allrandomBtn}>프로필생성</button>
       </div>
 
 

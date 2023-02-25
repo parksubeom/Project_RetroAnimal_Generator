@@ -12,7 +12,14 @@
     right: 5rem;
     width: 50px;
     height: 50px;
-    background-color: aqua;
+    background-color: #825b47;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.button_design:hover{
+    background-color: #eba75e;
+    color:#99501b;
 }
 
 
