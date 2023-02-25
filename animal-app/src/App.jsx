@@ -12,14 +12,12 @@ function App() {
   const [randomcolor, setRandomColor] = useState('2')
   const [randomeyes, setRandomEyes] = useState('3')
   const [randommouth, setRandomMouth] = useState('10')
-  const [randomacc, setRandomAcc] = useState('22')
-  const [randompattern, setRandomPattern] = useState('6')
+  const [randomacc, setRandomAcc] = useState('24')
+  const [randompattern, setRandomPattern] = useState('0')
   const [randombackground, setRandombackground] = useState('12')
 
 
-
   return (
-
     <section className='App'>
       <div className='section_AllBox'>
         <article className='section_top'>{/* section : 디자인 요소 (수정금지) */}
@@ -42,7 +40,7 @@ function App() {
         </div>
       </div>
       <aside className='asd'> {/* aside: 사이드 아이콘 */}
-            <Manual/>
+        <Manual />
       </aside>
     </section>
 

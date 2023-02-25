@@ -3,14 +3,13 @@ import '../Style/ViewSection.css';
 
 function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
 
-  console.log(randomacc)
-  console.log(randombackground)
   let backgroundurl = `./img/background/background${randombackground}.png`
   let faceurl = `./img/face/face${randomface}/color${randomcolor}.png`
   let eyesurl = `./img/eye/eye${randomeyes}.png`
   let mouthurl = `./img/mouth/mouth${randommouth}.png`
   let accurl = `./img/acc/acc${randomacc}.png`
   let patternurl = `./img/pattern/pattern${randompattern}.png`
+ 
 
 
   return (
@@ -23,6 +22,7 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
           <div className="animal_Img"><img alt="eyes_" src={eyesurl} /></div>
           <div className="animal_Img"><img alt="mouth_" src={mouthurl} /></div>
           <div className="animal_Img"><img alt="acc_" src={accurl} /></div>
+          
         </div>
       </aside>
     </div>
@@ -31,4 +31,3 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
 }
 
 export default ViewSection;
-

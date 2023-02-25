@@ -51,56 +51,55 @@ module.exports.Options = [
                 { key: 12, value: "올망눈" }]
     }
     ,
-    {
-        mouthselect:
-            [
-                { key: 1, value: "이빨입(기본)" },
-                { key: 2, value: "닫은입(작은)" },
-                { key: 3, value: "닫은입(기본)" },
-                { key: 4, value: "웃는입(작은)" },
-                { key: 5, value: "웃는입(큰)" },
-                { key: 6, value: "놀란입(작은)" },
-                { key: 7, value: "놀란입(큰)" },
-                { key: 8, value: "면접광탈입" },
-                { key: 9, value: "흡연(말보로)" },
-                { key: 10, value: "메롱입" }]
+    {mouthselect : 
+        [
+        {key:1, value:"이빨입(기본)"},
+        {key:2, value:"닫은입(작은)"},
+        {key:3, value:"닫은입(기본)"},
+        {key:4, value:"웃는입(작은)"},
+        {key:5, value:"웃는입(큰)"},
+        {key:6, value:"놀란입(작은)"},
+        {key:7, value:"놀란입(큰)"},
+        {key:8, value:"면접광탈입"},
+        {key:9, value:"과자먹는입"},
+        {key:10, value:"메롱입"}]
     }
     ,
-    {
-        accselect:
-            [
-                { key: 0, value: "악세서리x" },
-                { key: 1, value: "하와이안 꽃" },
-                { key: 2, value: "동글이 안경" },
-                { key: 3, value: "모노클" },
-                { key: 4, value: "썬글라스" },
-                { key: 5, value: "MIC" },
-                { key: 6, value: "땀땀" },
-                { key: 7, value: "열받음" },
-                { key: 8, value: "하트하트" },
-                { key: 9, value: "수면안대" },
-                { key: 10, value: "셜록모자" },
-                { key: 11, value: "빨간리본" },
-                { key: 12, value: "뿌애애앵 " },
-                { key: 13, value: "반짝이는 눈" },
-                { key: 14, value: "짜바게티 요리사" },
-                { key: 15, value: "버버리마스크" },
-                { key: 16, value: "제주감귤" },
-                { key: 17, value: "나뭇잎 하나" },
-                { key: 18, value: "큰나뭇잎 하나" },
-                { key: 19, value: "식사준비완료" },
-                { key: 20, value: "사슴" },
-                { key: 21, value: "유니콘" },
-                { key: 22, value: "반창고" },
-                { key: 23, value: "반창고2" },
-                { key: 24, value: "열이나요" },
-                { key: 25, value: "칼들기" },
-                { key: 26, value: "악마" },
-                { key: 27, value: "천사" },
-                { key: 28, value: "화관" },
-                { key: 29, value: "다들집중!" },
-
-            ]
+    {accselect : 
+        [ 
+        {key:0, value:"악세서리x"},
+        {key:1, value:"하와이안 꽃"},
+        {key:2, value:"동글이 안경"},
+        {key:3, value:"모노클"},
+        {key:4, value:"썬글라스"},
+        {key:5, value:"MIC"},
+        {key:6, value:"땀땀"},
+        {key:7, value:"열받음"},
+        {key:8, value:"하트하트"},
+        {key:9, value:"수면안대"},
+        {key:10, value:"셜록모자"},
+        {key:11, value:"빨간리본"},
+        {key:12, value:"뿌애애앵 "},
+        {key:13, value:"반짝이는 눈"},
+        {key:14, value:"짜바게티 요리사"},
+        {key:15, value:"버버리마스크"},
+        {key:16, value:"제주감귤"},
+        {key:17, value:"나뭇잎 하나"},
+        {key:18, value:"큰나뭇잎 하나"},
+        {key:19, value:"식사준비완료"},
+        {key:20, value:"사슴"},
+        {key:21, value:"유니콘"},
+        {key:22, value:"반창고"},
+        {key:23, value:"반창고2"},
+        {key:24, value:"열이나요"},
+        {key:25, value:"칼들기"},
+        {key:26, value:"악마"},
+        {key:27, value:"천사"},
+        {key:28, value:"화관"},
+        {key:29, value:"다들집중!"},
+        {key:30, value:"플렉스"}
+        
+    ]
     }
     ,
     {
@@ -115,28 +114,21 @@ module.exports.Options = [
 
     }
     ,
-    {
-        backgroundselect: [
-            { key: 1, value: "블랙" },
-            { key: 2, value: "레드" },
-            { key: 3, value: "옐로우" },
-            { key: 4, value: "피치" },
-            { key: 5, value: "바이올렛" },
-            { key: 6, value: "스카이블루" },
-            { key: 7, value: "민트" },
-            { key: 8, value: "핫핑크" },
-            { key: 9, value: "그린티" },
-            { key: 10, value: "제주감귤" },
-            { key: 11, value: "짙은차콜" },
-            { key: 12, value: "아이보리" },
-            { key: 13, value: "코발트블루" },
-
-        ]
-    }
-
-
-
-
+    {backgroundselect : [       
+        {key:2, value:"레드"},
+        {key:3, value:"옐로우"},
+        {key:4, value:"피치"},
+        {key:5, value:"바이올렛"},
+        {key:6, value:"스카이블루"},
+        {key:7, value:"민트"},
+        {key:8, value:"핫핑크"},
+        {key:9, value:"그린티"},
+        {key:10, value:"제주감귤"},
+        {key:11, value:"짙은차콜"},
+        {key:12, value:"아이보리"},
+        {key:13, value:"코발트블루"},
+        
+    ]}
 
 
 ]

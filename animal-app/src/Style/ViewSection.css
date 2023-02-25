@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -230px;
+    
 }
 
 .viewImg_box{
@@ -13,6 +13,7 @@
     border-radius: 20px;
     overflow: hidden;
     border:4px solid #453c3c;
+    margin-bottom: 50px;
 }
 
 .animal_Img{

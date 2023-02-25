@@ -6,10 +6,11 @@ function Title() {
   
     return (
       <div className="Title">
-        놀러와요 범비의 숲
+
+        <img src= 'https://i.imgur.com/roehYfr.png'/>
+
       </div>
     );
   }
   
   export default Title;
-
