@@ -14,7 +14,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const [accSelect, setAccSelect] = useState(1);
   const [patternSelect, setPatternSelect] = useState(1)
   const [backgroundSelect, setBackgroundSelect] = useState(1);
-
+  const [audio, setAudio] = useState(false)
 
 
   const faceOptions = Options[0]
@@ -24,6 +24,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const accOptions = Options[4]
   const patternOptions = Options[5]
   const backgroundOptions = Options[6]
+  
 
 
 
@@ -36,47 +37,60 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
     setRandombackground(Math.round(Math.random() * 19))
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
   }
 
   const randomFaceBtn = (e) => {
     console.log("얼굴 랜덤버튼 눌렸다")
     setRandomFace(Math.floor(Math.random() * 8))
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
   }
 
   const randomColorBtn = (e) => {
     console.log("얼굴 컬러 랜덤버튼 눌렸다")
     setRandomColor(Math.round(Math.random() * 17))
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
   }
   const randomEyesBtn = (e) => {
 
     console.log("눈 랜덤버튼 눌렸다")
     setRandomEyes(Math.round(Math.random() * 13))
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
   }
 
   const randomMouthBtn = (e) => {
     console.log("입  랜덤버튼 눌렸다")
     setRandomMouth(Math.round(Math.random() * 11))
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
   }
 
   const randomAccBtn = (e) => {
     console.log("악세서리 랜덤버튼 눌렸다")
     setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
   }
 
   const randomPatternBtn = (e) => {
     console.log("무늬 랜덤버튼 눌렸다")
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
-
-    setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
 
   }
 
   const randomBackgroundBtn = (e) => {
     console.log("배경 랜덤버튼 눌렸다")
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
 
   }
-  //==========================랜덤버튼함수==========================//
   //==========================랜덤버튼함수==========================//
 
 
@@ -120,10 +134,13 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandombackground(e.target.value)
   }
 
+
   return (
 
     <div className="btn_allBox">
 
+      {audio ? <audio src='./audio/click_1.mp3'autoPlay={audio}></audio> : null }
+      
       <div className='Button_group'>
         <button type='button' value='button' className='randomBtn_Design' onClick={randomFaceBtn}>얼굴랜덤</button>
         <select className='selectBtn_Design' onChange={faceselectBtn} value={faceSelect}>
