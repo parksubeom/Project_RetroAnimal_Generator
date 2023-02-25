@@ -6,9 +6,7 @@ function Title() {
   
     return (
       <div className="Title">
-
         <img src= 'https://i.imgur.com/roehYfr.png'/>
-
       </div>
     );
   }
