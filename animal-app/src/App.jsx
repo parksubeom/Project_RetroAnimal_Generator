@@ -19,7 +19,6 @@ function App() {
 
   return (
     <section className='App'>
-      <audio src="src/audio/Rinne.mp3" autoPlay={true}></audio>
       <div className='section_AllBox'>
         <article className='section_top'>{/* section : 디자인 요소 (수정금지) */}
           <div>

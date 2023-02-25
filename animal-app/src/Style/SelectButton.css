@@ -38,6 +38,7 @@
 
 .randomBtn_Design{
 
+    position: absolute;
     width: 70px;
     height: 30px;
     margin-right: 10px;
@@ -46,25 +47,18 @@
     border: 3px solid #3b342f;
     background-color: #bb8767;
     font-weight: 600;
-}
-
-.randomBtn_Design::before{
-
-    position: absolute;
-    top:5px;
-    width: 70px;
-    height: 30px;
-    margin-right: 10px;
-    border-radius: 10px;
-    color:#3b342f;
-    background-color: #bb8767;
-    font-weight: 600;
-    z-index: 999;
+    box-shadow: 0px 3px 0px #3b342f;
 }
 
 .randomBtn_Design:hover{
     background-color: #eba75e;
     color:#99501b;
+}
+
+.randomBtn_Design:active{
+    background-color: #ffeab8;
+    margin-top:3px;
+    box-shadow: none;
 }
 
 .AllRandomBtn_Design:hover{

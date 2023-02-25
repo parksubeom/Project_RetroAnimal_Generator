@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    position: relative;
 }
 
 .Title > img {
