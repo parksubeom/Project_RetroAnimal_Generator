@@ -19,7 +19,7 @@ function App() {
 
   return (
     <section className='App'>
-      <audio src="https://www.youtube.com/watch?v=63d3-whkFY0" autoPlay={true}></audio>
+      <audio src="src/audio/Rinne.mp3" autoPlay={true}></audio>
       <div className='section_AllBox'>
         <article className='section_top'>{/* section : 디자인 요소 (수정금지) */}
           <div>
