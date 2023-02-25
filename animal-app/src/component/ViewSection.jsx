@@ -9,7 +9,7 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
   let mouthurl = `./img/mouth/mouth${randommouth}.png`
   let accurl = `./img/acc/acc${randomacc}.png`
   let patternurl = `./img/pattern/pattern${randompattern}.png`
- 
+
 
 
   return (
