@@ -1,7 +1,6 @@
 import '../Style/SelectButton.css';
 import React, { useState } from 'react';
-
-const { Options } = require('./selectData')
+const {Options} = require('./selectData')
 //셀렉트 버튼을 누르면  온클릭이벤트가 실행되고 해당버튼에 고유한 값을 앱컴포넌트로 올려줘야한다.
 //랜덤버튼을 누르면 온클릭이벤트가 실행되고, Matr.round(Matr.rendom)*10 메서드를 실행해서 나온 정수값을 state값에 넣어준다.
 //여기서 나온 정수값은 Viewsection에서 이미지를 랜덤으로 불러오기위해 필요하기에 Viewsection으로 값을 보내줘야한다.
@@ -68,6 +67,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     console.log("무늬 랜덤버튼 눌렸다")
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
 
+    setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
+
   }
 
   const randomBackgroundBtn = (e) => {
@@ -75,6 +76,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
 
   }
+  //==========================랜덤버튼함수==========================//
   //==========================랜덤버튼함수==========================//
 
 
@@ -192,6 +194,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
 
     </div>
+    
   )
 
 }

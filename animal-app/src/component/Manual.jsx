@@ -16,14 +16,15 @@ function Manual() {
   return (
     <div className='side_button'>
       <div>
+
         {modal ? <Modal  handleOnClick = {handleOnClick}/> : null}
         <button className="button_design" onClick={handleOnClick}>Manual</button>
       </div>
-      <div>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR1gs9skIt6DNRYE5GI9blt5J6vgImK8sld5rVblJP1wjjQg/viewform?vc=0&c=0&w=1&flr=0" target="_blank"><button className="button_design">리뷰 폼</button></a>
-      </div>
-    </div>
-  );
-}
 
+        {modal ? <Modal handleOnClick={handleOnClick} /> : null}
+        <button className="button_design" onClick={handleOnClick}>여기클릭</button>
+      </div>
+  )
+}
 export default Manual;

@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   font-family: maple;
-  font-family: maple;
+
 }
 
 
@@ -94,7 +94,6 @@ button {
   background-color: #fff8f0;
   border: 4px solid #453931;
   border-radius: 20px;
-
 }
 
 .design_Top_Dot {
@@ -104,7 +103,6 @@ button {
   height: 25px;
   background-color: #453931;
   border-radius: 20px;
-
 }
 
 .contants_AllBox {

@@ -6,7 +6,6 @@ import Title from './component/Title.jsx';
 import ViewSection from './component/ViewSection.jsx';
 
 
-
 function App() {
   //App컴포넌트는 각 컴포넌트로 부터 값을 받아와서 다시 뿌려주는 허브역할을 해야한다.
   const [randomface, setRandomFace] = useState('5')
