@@ -13,6 +13,7 @@
     flex-direction: row;
 }
 
+<<<<<<< HEAD
 .randomBtn_box>li {
     width: 70px;
     height: 30px;
@@ -36,6 +37,39 @@
     margin-right: 10px;
     border-radius: 10px;
     color: #3b342f;
+=======
+.AllRandomBtn_Design {
+    width: 110px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color:#3b342f;
+    border: 3px solid #3b342f;
+    background-color: #f3b757;
+    font-weight: 600;
+}
+
+.CreateProfile_Design {
+    width: 110px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    color:#3b342f;
+    border: 3px solid #3b342f;
+    background-color: #b2e168;
+    font-weight: 600;
+}
+
+
+.randomBtn_Design{
+
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color:#3b342f;
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
     border: 3px solid #3b342f;
     background-color: #bb8767;
     font-weight: 600;
@@ -47,10 +81,22 @@
     color: #99501b;
 }
 
+<<<<<<< HEAD
 .randomBtn_Design:active {
     background-color: #ffeab8;
     margin-top: 3px;
     box-shadow: none;
+=======
+.randomBtn_Design:active{
+    background-color: #ffeab8;
+    margin-top:3px;
+    box-shadow: none;
+}
+
+.AllRandomBtn_Design:hover{
+    background-color: #e46a36;
+    color:#f1e4db;
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
 }
 
 .selectBtn_Design {

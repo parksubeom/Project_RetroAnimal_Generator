@@ -6,6 +6,7 @@ const { Options } = require('./selectData')
 //여기서 나온 정수값은 Viewsection에서 이미지를 랜덤으로 불러오기위해 필요하기에 Viewsection으로 값을 보내줘야한다.
 //셀렉트버튼 컴포넌트는 뷰 컴포넌트의 자식컴포넌트로 들어가지 않으니까 state & props로 값을 주고받기 힘들다. => App.jsx로 값을 올려보낸다.
 //각 컴포넌트들끼리 주고받을 값은 App 컴포넌트로 보내서, 다시 프롭스로 뿌려준다.
+<<<<<<< HEAD
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
   , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
   const [faceSelect, setFaceSelect] = useState(randomface);
@@ -17,6 +18,18 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const [backgroundSelect, setBackgroundSelect] = useState(randombackground);
   const [audio, setAudio] = useState(false)
   console.log(randombackground)
+=======
+function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground }) {
+  const [faceSelect, setFaceSelect] = useState();
+  const [colorSelect, setColorSelect] = useState(1);
+  const [eyesSelect, setEyesSelect] = useState(1);
+  const [mouthSelect, setMouthSelect] = useState(1);
+  const [accSelect, setAccSelect] = useState(1);
+  const [patternSelect, setPatternSelect] = useState(1)
+  const [backgroundSelect, setBackgroundSelect] = useState(1);
+  const [audio, setAudio] = useState(false)
+
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
 
   const faceOptions = Options[0]
   const colorOptions = Options[1]
@@ -25,6 +38,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const accOptions = Options[4]
   const patternOptions = Options[5]
   const backgroundOptions = Options[6]
+  
 
 
 
@@ -36,51 +50,81 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomMouth(Math.round(Math.random() * 11))
     setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
+<<<<<<< HEAD
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     setAudio(!audio)
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setRandombackground(Math.round(Math.random() * 19))
+    setAudio(!audio)
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
   }
 
   const randomFaceBtn = (e) => {
     console.log("얼굴 랜덤버튼 눌렸다")
     setRandomFace(Math.floor(Math.random() * 8))
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
   }
 
   const randomColorBtn = (e) => {
     console.log("얼굴 컬러 랜덤버튼 눌렸다")
     setRandomColor(Math.round(Math.random() * 17))
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
   }
   const randomEyesBtn = (e) => {
 
     console.log("눈 랜덤버튼 눌렸다")
     setRandomEyes(Math.round(Math.random() * 13))
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
   }
 
   const randomMouthBtn = (e) => {
     console.log("입  랜덤버튼 눌렸다")
     setRandomMouth(Math.round(Math.random() * 11))
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
   }
 
   const randomAccBtn = (e) => {
     console.log("악세서리 랜덤버튼 눌렸다")
     setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
   }
 
   const randomPatternBtn = (e) => {
     console.log("무늬 랜덤버튼 눌렸다")
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
 
   }
 
@@ -88,7 +132,11 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     console.log("배경 랜덤버튼 눌렸다")
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     setAudio(!audio)
+<<<<<<< HEAD
     setTimeout(() => { setAudio(false) }, 300)
+=======
+    setTimeout(()=>{setAudio(false)},300)
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
 
   }
   //==========================랜덤버튼함수==========================//
@@ -151,11 +199,24 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
         </ul>
         <ul className='selectBtn_box'>
 
+<<<<<<< HEAD
           <li>
             <select className='selectBtn_Design' onChange={faceselectBtn} value={randomface}>
               {faceOptions.faceselect.map((item, index) => (<option key={item.key} value={item.key}>{item.value}</option>))}
             </select>
           </li>
+=======
+      {audio ? <audio src='./audio/click_1.mp3'autoPlay={audio}></audio> : null }
+      
+      <div className='Button_group'>
+        <button type='button' value='button' className='randomBtn_Design' onClick={randomFaceBtn}>얼굴랜덤</button>
+        <select className='selectBtn_Design' onChange={faceselectBtn} value={faceSelect}>
+          {faceOptions.faceselect.map((item, index) => (
+            <option key={item.key} value={item.key}>{item.value}</option>
+          ))}
+        </select>
+      </div>
+>>>>>>> 83d6b56db7d97546cae092b3b42ccfbbc6b39e78
 
 
           <li>
