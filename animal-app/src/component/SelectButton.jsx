@@ -8,13 +8,7 @@ const { Options } = require('./selectData')
 
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
   , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
-  const [faceSelect, setFaceSelect] = useState(randomface);
-  const [colorSelect, setColorSelect] = useState(randomcolor);
-  const [eyesSelect, setEyesSelect] = useState(randomeyes);
-  const [mouthSelect, setMouthSelect] = useState(randommouth);
-  const [accSelect, setAccSelect] = useState(randomacc);
-  const [patternSelect, setPatternSelect] = useState(randompattern)
-  const [backgroundSelect, setBackgroundSelect] = useState(randombackground);
+
   const [audio, setAudio] = useState(false)
   console.log(randombackground)
 
@@ -26,8 +20,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const accOptions = Options[4]
   const patternOptions = Options[5]
   const backgroundOptions = Options[6]
-
-
 
 
   const allrandomBtn = () => {
@@ -43,8 +35,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setTimeout(() => { setAudio(false) }, 300)
   }
 
-  const randomBtn = (event, setRandom) => {
-    console.log("얼굴 랜덤버튼 눌렸다")
+  const randomBtn = (setRandom) => {
+    console.log("랜덤버튼 눌렸다.")
     if (setRandom === setRandomFace) {
       setRandomFace(Math.floor(Math.random() * 8))
     } else if (setRandom === setRandomColor) {
@@ -66,27 +58,20 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   //==========================랜덤버튼함수==========================//
 
   const SelectBtn = (e, setSelect) => {
-    console.log("얼굴 선택버튼버튼 눌렸다")
-    if (setSelect === setFaceSelect) {
-      setFaceSelect(e.currentTarget.value)
+    console.log("셀렉버튼 눌렸다.")
+    if (setSelect === "face") {
       setRandomFace(e.target.value)
-    } else if (setSelect === setColorSelect) {
-      setColorSelect(e.currentTarget.value)
+    } else if (setSelect === "color") {
       setRandomColor(e.target.value)
-    } else if (setSelect === setEyesSelect) {
-      setEyesSelect(e.currentTarget.value)
+    } else if (setSelect === "eyes") {
       setRandomEyes(e.target.value)
-    } else if (setSelect === setMouthSelect) {
-      setMouthSelect(e.currentTarget.value)
+    } else if (setSelect === "mouth") {
       setRandomMouth(e.target.value)
-    } else if (setSelect === setAccSelect) {
-      setAccSelect(e.currentTarget.value)
+    } else if (setSelect === "acc") {
       setRandomAcc(e.target.value)
-    } else if (setSelect === setPatternSelect) {
-      setPatternSelect(e.currentTarget.value)
+    } else if (setSelect === "pattern") {
       setRandomPattern(e.target.value)
-    } else if (setSelect === setBackgroundSelect) {
-      setBackgroundSelect(e.currentTarget.value)
+    } else if (setSelect === "background") {
       setRandombackground(e.target.value)
     }
   }
@@ -97,55 +82,52 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       <div>
         {audio ? <audio src='./audio/click_1.mp3' autoPlay={audio}></audio> : null}
         <ul className='randomBtn_box'>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandomFace)}>얼굴랜덤</button></li>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandomColor)}>컬러랜덤</button></li>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandomEyes)}>눈랜덤</button></li>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandomMouth)}>입랜덤</button></li>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandomAcc)}>악세랜덤</button></li>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandomPattern)}>무늬랜덤</button></li>
-          <li><button type='button' value='button' className='randomBtn_Design' onClick={(event) => randomBtn(event, setRandombackground)}>배경 랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomFace)}>얼굴랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomColor)}>컬러랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomEyes)}>눈랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomMouth)}>입랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomAcc)}>악세랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomPattern)}>무늬랜덤</button></li>
+          <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandombackground)}>배경 랜덤</button></li>
         </ul>
         <ul className='selectBtn_box'>
 
           <li>
-            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setFaceSelect)} value={randomface}>
+            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "face")} value={randomface}>
               {faceOptions.faceselect.map((item) => (<option key={item.key} value={item.key}>{item.value}</option>))}
             </select>
           </li>
 
 
           <li>
-            {randomcolor < 16 ? <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setColorSelect)} value={randomcolor}>
+            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "color")} value={randomcolor}>
+              {randomcolor > 15 ? <option>🎉레어 컬러🎉</option> : null}
               {colorOptions.colorselect.map((item) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}</select>
-              : <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setColorSelect)} value={randomcolor}>
-                <option >🎉레어 컬러🎉</option>
-              </select>}
+
           </li>
 
           <li>
-            {randomeyes < 13 ? <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setEyesSelect)} value={randomeyes}>
+            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "eyes")} value={randomeyes}>
+              {randomeyes > 12 ? <option>🎉레어 눈🎉</option> : null}
               {eyesOptions.eyesselect.map((item) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}</select>
-              : <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setEyesSelect)} value={randomeyes}>
-                <option >🎉레어 눈🎉</option>
-              </select>}
+
           </li>
 
 
           <li>
-            {randommouth < 11 ? <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setMouthSelect)} value={randommouth}>
+            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "mouth")} value={randommouth}>
+              {randommouth > 10 ? <option>🎉레어 입🎉</option> : null}
               {mouthOptions.mouthselect.map((item) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}</select>
-              : <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setMouthSelect)} value={randommouth}>
-                <option >🎉레어 입🎉</option> </select>}
           </li>
 
           <li>
-            {<select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setAccSelect)} value={randomacc}>
+            {<select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "acc")} value={randomacc}>
               {accOptions.accselect.map((item) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
@@ -153,7 +135,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
           </li>
 
           <li>
-            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setPatternSelect)} value={randompattern}>
+            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "pattern")} value={randompattern}>
               {patternOptions.patternselect.map((item) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
@@ -161,12 +143,11 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
           </li>
 
           <li>
-            {randombackground < 12 ? <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setBackgroundSelect)} value={randombackground}>
+            <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "background")} value={randombackground}>
+              {randombackground > 12 ? <option>🎉레어 배경🎉</option> : null}
               {backgroundOptions.backgroundselect.map((item) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}</select>
-              : <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, setBackgroundSelect)} value={randombackground}>
-                <option>🎉레어배경🎉</option></select>}
           </li>
 
         </ul>
@@ -175,13 +156,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
         <button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button>
         <button type='button' value='button' className='CreateProfile_Design' onClick={allrandomBtn}>프로필생성</button>
       </div>
-
-
-
     </div>
-
   )
-
 }
 
 export default SelectButton;
