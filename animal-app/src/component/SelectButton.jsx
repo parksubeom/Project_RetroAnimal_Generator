@@ -6,14 +6,15 @@ const { Options } = require('./selectData')
 //여기서 나온 정수값은 Viewsection에서 이미지를 랜덤으로 불러오기위해 필요하기에 Viewsection으로 값을 보내줘야한다.
 //셀렉트버튼 컴포넌트는 뷰 컴포넌트의 자식컴포넌트로 들어가지 않으니까 state & props로 값을 주고받기 힘들다. => App.jsx로 값을 올려보낸다.
 //각 컴포넌트들끼리 주고받을 값은 App 컴포넌트로 보내서, 다시 프롭스로 뿌려준다.
-function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground }) {
-  const [faceSelect, setFaceSelect] = useState();
-  const [colorSelect, setColorSelect] = useState(1);
-  const [eyesSelect, setEyesSelect] = useState(1);
-  const [mouthSelect, setMouthSelect] = useState(1);
-  const [accSelect, setAccSelect] = useState(1);
-  const [patternSelect, setPatternSelect] = useState(1)
-  const [backgroundSelect, setBackgroundSelect] = useState(1);
+function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
+  ,randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
+  const [faceSelect, setFaceSelect] = useState(randomface);
+  const [colorSelect, setColorSelect] = useState(randomcolor);
+  const [eyesSelect, setEyesSelect] = useState(randomeyes);
+  const [mouthSelect, setMouthSelect] = useState( randommouth);
+  const [accSelect, setAccSelect] = useState(randomacc);
+  const [patternSelect, setPatternSelect] = useState(randompattern)
+  const [backgroundSelect, setBackgroundSelect] = useState(randombackground);
   const [audio, setAudio] = useState(false)
 
 
@@ -36,7 +37,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomMouth(Math.round(Math.random() * 11))
     setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
-    setRandombackground(Math.round(Math.random() * 19))
+    setRandombackground(Math.round(Math.random() * (19-1)) +1)
     setAudio(!audio)
     setTimeout(() => { setAudio(false) }, 300)
   }
@@ -151,47 +152,47 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
         </ul>
         <ul className='selectBtn_box'>
           <li>
-            <select className='selectBtn_Design' onChange={faceselectBtn} value={faceSelect}>
+            <select className='selectBtn_Design' onChange={faceselectBtn} value={randomface}>
               {faceOptions.faceselect.map((item, index) => (<option key={item.key} value={item.key}>{item.value}</option>))}
             </select>
           </li>
           <li>
-            <select className='selectBtn_Design' onChange={colorselectBtn} value={colorSelect}>
+            <select className='selectBtn_Design' onChange={colorselectBtn} value={randomcolor}>
               {colorOptions.colorselect.map((item, index) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
             </select>
           </li>
           <li>
-            <select className='selectBtn_Design' onChange={eyesselectBtn} value={eyesSelect}>
+            <select className='selectBtn_Design' onChange={eyesselectBtn} value={randomeyes}>
               {eyesOptions.eyesselect.map((item, index) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
             </select>
           </li>
           <li>
-            <select className='selectBtn_Design' onChange={mouthselectBtn} value={mouthSelect}>
+            <select className='selectBtn_Design' onChange={mouthselectBtn} value={randommouth}>
               {mouthOptions.mouthselect.map((item, index) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
             </select>
           </li>
           <li>
-            <select className='selectBtn_Design' onChange={accselectBtn} value={accSelect}>
+            <select className='selectBtn_Design' onChange={accselectBtn} value={randomacc}>
               {accOptions.accselect.map((item, index) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
             </select>
           </li>
           <li>
-            <select className='selectBtn_Design' onChange={patternselectBtn} value={patternSelect}>
+            <select className='selectBtn_Design' onChange={patternselectBtn} value={randompattern}>
               {patternOptions.patternselect.map((item, index) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
             </select>
           </li>
           <li>
-            <select className='selectBtn_Design' onChange={backgroundselectBtn} value={backgroundSelect}>
+            <select className='selectBtn_Design' onChange={backgroundselectBtn} value={randombackground}>
               {backgroundOptions.backgroundselect.map((item, index) => (
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}
