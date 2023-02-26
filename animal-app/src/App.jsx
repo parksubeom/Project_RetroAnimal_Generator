@@ -34,12 +34,12 @@ function App() {
           <main className='asd'>{/* main: 메인컨텐츠 */}
             {/* 컨텐츠가 들어갈 곳입니다. */}
             <Title />
-            <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} />
+            <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} className='viewSection' />
             <SelectButton setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground} />
           </main>
         </div>
       </div>
-      <aside className='asd'> {/* aside: 사이드 아이콘 */}
+      <aside className='asdd'> {/* aside: 사이드 아이콘 */}
         <Manual />
       </aside>
     </section>

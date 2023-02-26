@@ -3,17 +3,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .viewImg_box{
     position: relative;
-    width:250px;
+    width: 250px;
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
     border:4px solid #453c3c;
-    margin-bottom: 50px;
 }
 
 .animal_Img{

@@ -13,66 +13,69 @@
     z-index: 9999;
 }
 
-.modal_box{
+.modal_box {
     display: flex;
-    justify-content:center;
-    width: 500px;
+    justify-content: center;
+    width: 400px;
     height: 600px;
     position: relative;
 }
 
-.modal_box >.modal_totalview {  
-   position: relative;
-   overflow: hidden;
-   width:500px;
-   border: 3px solid black;
-   border-radius:15px;
+.modal_box>.modal_totalview {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    border: 3px solid black;
+    border-radius: 15px;
 }
 
 
-.modal_totalview >.modal_topview {
+.modal_totalview>.modal_topview {
     padding: 40px;
     background-color: #fbeddc;
     height: 200px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
-.modal_totalview >.modal_bottomview {
+.modal_totalview>.modal_bottomview {
     padding: 40px;
     background-color: #825b47;
     height: 250px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
- h2{
-    color : #f7f1f1;
+h2 {
+    color: #f7f1f1;
     text-align: center;
-    text-shadow: -1px 0 #000, 0 3px #000, 4px 0 #000, 0 -1px #000;
-    font-size : 28px;
+    -webkit-text-stroke: 2px #000;
+    font-size: 28px;
+    font-weight: 800;
     margin: 20px 0px;
 }
-.modal_text{
-    
-    color : #2c2b2b;
+
+.modal_text {
+
+    color: #2c2b2b;
     text-align: center;
-    font-size : 17px;
+    font-size: 15px;
     word-break: keep-all;
-    letter-spacing:0.3px;
+    letter-spacing: 0.3px;
     line-height: 130%;
+    text-shadow: 0px 0px 10px #2c2b2b;
 }
 
-.textcolor{
-    color :  #fbeddc;
+.textcolor {
+    color: #fbeddc;
 }
 
 .modal_icon {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     background-image: url('https://i.imgur.com/HbHfIjy.png');
     background-size: cover;
     width: 180px;
@@ -83,20 +86,17 @@
 }
 
 .exit_button {
-    border:3px solid black;
-    border-radius:15px;
+    border: 3px solid black;
+    border-radius: 15px;
     padding: 10px 40px;
     background-color: #fbeddc;
-    color : #2c2b2b;
+    color: #2c2b2b;
     text-align: center;
-    font-size : 17px;
+    font-size: 17px;
     margin-top: 30px;
 }
 
-.exit_button:hover{
+.exit_button:hover {
     background-color: #f8c186;
-    color:#fbeddc;
+    color: #fbeddc;
 }
-
-
-

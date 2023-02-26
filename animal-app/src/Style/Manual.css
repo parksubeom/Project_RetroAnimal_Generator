@@ -1,26 +1,32 @@
-.side_button{
+.sidebutton_Group {
     position: fixed;
-    display:flex;
-    flex-direction:column;
-    top: 100px;
-    right: 0px;
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: 50px;
 }
 
-.button_design {
+.sideBtn_size {
     position: relative;
-    margin-bottom:50px;
-    right: 5rem;
-    width: 50px;
-    height: 50px;
-    background-color: #825b47;
-    border-radius: 50%;
-    border: 2px solid black;
+    width: 35px;
+    height: 35px;
+    margin: 15px;
 }
 
-.button_design:hover{
-    background-color: #eba75e;
-    color:#99501b;
+.sideBtn_Design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    border: 4px solid #453931;
+    background-color: #fff8f0;
+    border-radius: 10px;
+
 }
 
-
-
+.sideBtn_Design:hover{
+    border-color: #d16e2c;
+    background-color: #ffdeb8;
+}

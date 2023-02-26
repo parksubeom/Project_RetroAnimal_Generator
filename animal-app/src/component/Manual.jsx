@@ -12,22 +12,28 @@ function Manual() {
     setModal(!modal);
   }
 
-  const handleonclickAudio = ()=>{
+  const handleonclickAudio = () => {
     setAudio(!audio)
   }
 
 
   return (
-    <div className='side_button'>
-      <div>
+    <div className='sidebutton_Group'>
         {modal ? <Modal handleOnClick={handleOnClick} /> : null}
-        <button className="button_design" onClick={handleOnClick}>Manual</button>
+      <div>
+        <button className='sideBtn_size' onClick={handleOnClick}>
+          <div className='sideBtn_Design'></div>
+        </button>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR1gs9skIt6DNRYE5GI9blt5J6vgImK8sld5rVblJP1wjjQg/viewform?vc=0&c=0&w=1&flr=0" target="_blank">
-        <button className="button_design">리뷰 폼</button>
-      </a>
-      <button className="button_design" onClick={handleonclickAudio}>음악</button>
-      {audio? <audio src='./audio/mornimg.mp3'autoPlay={audio} loop="loop"></audio> : null}
+      <button className='sideBtn_size'>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR1gs9skIt6DNRYE5GI9blt5J6vgImK8sld5rVblJP1wjjQg/viewform?vc=0&c=0&w=1&flr=0" target="_blank">
+          <div className='sideBtn_Design'></div>
+        </a>
+      </button>
+      <button className='sideBtn_size' onClick={handleonclickAudio}>
+        <div className='sideBtn_Design'></div>
+      </button>
+      {audio ? <audio src='./audio/mornimg.mp3' autoPlay={audio} loop="loop"></audio> : null}
     </div>
   )
 }
