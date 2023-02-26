@@ -35,19 +35,18 @@
     border-radius: 10px;
     color: #1a1614;
     border: 3px solid #3b342f;
-    background-color: #bb8767;
+    background: #bb8767;
     font-weight: 600;
     box-shadow: 0px 3px 0px #3b342f;
 }
 
 .randomBtn_Design:hover {
-    background-color: #eba75e;
-    text-shadow: 0px 0px 5px #fff;
+    background: #eba75e;
     color: #99501b;
 }
 
 .randomBtn_Design:active {
-    background-color: #ffeab8;
+    background: #ffeab8;
     margin-top: 3px;
     box-shadow: none;
 }

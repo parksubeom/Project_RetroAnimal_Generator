@@ -29,5 +29,17 @@
 .sideBtn_Design:hover{
     border-color: #d16e2c;
     background-color: #ffdeb8;
-    box-shadow: 0px 0px 10px #8d4819;
+    box-shadow: 0px 0px 10px #f0904b;
+}
+
+.sideBtn_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    z-index: 999;
+    transform: rotate(-45deg);
 }

@@ -115,9 +115,13 @@ h2 {
     position: absolute;
     top: -90px;
     z-index: 1;
+    transform: rotate(-10deg);
+    animation: Shake 3s infinite;
 }
 
-
+@keyframes Shake {
+    50%{transform: rotate(5deg);}
+}
 
 
 
@@ -141,3 +145,18 @@ h2 {
     background-color: #f8c186;
     color: #fbeddc;
 }
+
+
+.modalPattern{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-image: url(https://i.imgur.com/dBuAKhc.png);
+    opacity: 0.6;
+    z-index: 999;
+}
+
+.mtop-left{top:10px; left: 10px;}
+.mtop-right{top:10px; right: 10px; transform: rotate(90deg);}
+.mbottom-left{bottom:10px; left: 10px;transform: rotate(270deg);}
+.mbottom-right{bottom:10px; right: 10px;transform: rotate(180deg);}
