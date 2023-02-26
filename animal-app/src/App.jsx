@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Manual from './component/Manual.jsx';
-import SelectButton from './component/SelectButton.jsx';
-import Title from './component/Title.jsx';
+import Profile from './component/Profile.jsx';
 import ViewSection from './component/ViewSection.jsx';
 
 
@@ -12,40 +11,38 @@ function App() {
   const [randomcolor, setRandomColor] = useState('2')
   const [randomeyes, setRandomEyes] = useState('3')
   const [randommouth, setRandomMouth] = useState('10')
-  const [randomacc, setRandomAcc] = useState('24')
-  const [randompattern, setRandomPattern] = useState('0')
+  const [randomacc, setRandomAcc] = useState('14')
+  const [randompattern, setRandomPattern] = useState('6')
   const [randombackground, setRandombackground] = useState('12')
 
 
   return (
     <section className='App'>
-      <div className='section_AllBox'>
-        <article className='section_top'>{/* section : 디자인 요소 (수정금지) */}
-          <div>
-            <div className='design_Top_Dot'></div>
-            <div className='design_Top_Line'></div>
-          </div>
-          <div>
-            <div className='design_Top_Dot'></div>
-            <div className='design_Top_Line'></div>
-          </div>
-        </article>
-        <div className='contants_AllBox'>{/* section : 컨텐츠 박스 */}
-          <main className='asd'>{/* main: 메인컨텐츠 */}
-            {/* 컨텐츠가 들어갈 곳입니다. */}
-            <Title />
-            <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} className='viewSection' />
-            <SelectButton setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground} />
-          </main>
-        </div>
-      </div>
-      <aside className='asdd'> {/* aside: 사이드 아이콘 */}
+      <article className='viewGroup__'>
+        <div className='Top_ber'></div>
+        <ul>
+          <li class="Pattern ptop-left"></li>
+          <li class="Pattern ptop-right"></li>
+          <li class="Pattern pbottom-left"></li>
+          <li class="Pattern pbottom-right"></li>
+        </ul>
+        <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} className='viewSection' />
+        <footer>
+          <p>본 프로젝트는 수범,주비의 공동작품입니다.<br />
+            페이지내에 사용된 모든 이미지들의<br />
+            무단 배포 및 도용을 금지합니다.</p>
+        </footer>
+      </article>
+      <article className='btnAllGroup__'>
         <Manual />
-      </aside>
+        <div className='profileGroup__'>
+          <Profile setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground} />
+        </div>
+      </article>
     </section>
 
-
   )
+
 
 
 }

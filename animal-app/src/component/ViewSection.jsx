@@ -1,5 +1,5 @@
 import '../Style/ViewSection.css';
-
+import Title from '../component/Title.jsx';
 
 function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
 
@@ -24,6 +24,7 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
           <div className="animal_Img"><img alt="acc_" src={accurl} /></div>
           
         </div>
+        <Title />
       </aside>
     </div>
 
