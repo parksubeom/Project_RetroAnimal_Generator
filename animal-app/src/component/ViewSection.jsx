@@ -15,7 +15,7 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
   return (
     <div>
       <aside className="ViewSection">
-        <div className='viewImg_box'>
+        <div className='viewImg_box anicon '>
           <div className="animal_Img"><img alt="face_" src={backgroundurl} /></div>
           <div className="animal_Img"><img alt="face_" src={faceurl} /></div>
           <div className="animal_Img"><img alt="pattern_" src={patternurl} /></div>

@@ -11,8 +11,8 @@ function App() {
   const [randomcolor, setRandomColor] = useState('2')
   const [randomeyes, setRandomEyes] = useState('3')
   const [randommouth, setRandomMouth] = useState('10')
-  const [randomacc, setRandomAcc] = useState('14')
-  const [randompattern, setRandomPattern] = useState('6')
+  const [randomacc, setRandomAcc] = useState('4')
+  const [randompattern, setRandomPattern] = useState('2')
   const [randombackground, setRandombackground] = useState('12')
 
 

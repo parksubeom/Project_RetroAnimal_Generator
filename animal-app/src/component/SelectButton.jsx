@@ -1,5 +1,7 @@
 import '../Style/SelectButton.css';
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
+import domtoimage from 'dom-to-image';
+import { saveAs } from 'file-saver';
 const { Options } = require('./selectData')
 //셀렉트 버튼을 누르면  온클릭이벤트가 실행되고 해당버튼에 고유한 값을 앱컴포넌트로 올려줘야한다.
 //랜덤버튼을 누르면 온클릭이벤트가 실행되고, Matr.round(Matr.rendom)*10 메서드를 실행해서 나온 정수값을 state값에 넣어준다.
@@ -75,6 +77,15 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setRandombackground(e.target.value)
     }
   }
+ 
+  const onDownloadBtn = () => {
+    domtoimage
+      .toBlob(document.querySelector('.viewImg_box'))
+      .then((blob) => {
+        saveAs(blob, 'anicon.png');
+      });
+  };
+
 
   return (
 
@@ -154,7 +165,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       </div>
       <ul className='lastBtn_Box'>
         <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
-        <li><button type='button' value='button' className='CreateProfile_Design' onClick={allrandomBtn}>프로필생성</button></li>
+        <li><button type='button' value='button' className='CreateProfile_Design' onClick={onDownloadBtn}>프로필생성</button></li>
       </ul>
     </div>
   )
