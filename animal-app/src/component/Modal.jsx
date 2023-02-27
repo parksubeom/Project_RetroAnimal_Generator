@@ -36,6 +36,7 @@ function Modal({ handleOnClick }) {
                             한번쯤 사용해보세요!
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>

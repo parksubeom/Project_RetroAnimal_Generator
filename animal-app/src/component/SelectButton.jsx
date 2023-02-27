@@ -75,7 +75,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setRandombackground(e.target.value)
     }
   }
-    //==========================셀렉버튼함수==========================//
 
   return (
 
