@@ -2,7 +2,7 @@ import '../Style/Manual.css';
 import React, { useState } from 'react';
 import Modal from './Modal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic, faQuestion, faVolumeXmark, faCircleQuestion } from "@fortawesome/free-solid-svg-icons"
+import {faVolumeXmark} from "@fortawesome/free-solid-svg-icons"
 
 
 function Manual() {
@@ -39,7 +39,7 @@ function Manual() {
       </button>
       <button className='sideBtn_size' onClick={handleonclickAudio}>
         <div className='sideBtn_Design'>
-          <div className='sideBtn_text'>{!audio ?<img src="https://cdn-icons-png.flaticon.com/512/1014/1014333.png"></img> : <FontAwesomeIcon icon={faVolumeXmark} />}</div>
+          <div className='sideBtn_text'>{!audio ? <img src="https://cdn-icons-png.flaticon.com/512/1014/1014333.png"></img> : <FontAwesomeIcon icon={faVolumeXmark} />}</div>
         </div>
       </button>
       {audio ? <audio src='./audio/mornimg.mp3' autoPlay={audio} loop="loop"></audio> : null}
