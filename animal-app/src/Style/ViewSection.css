@@ -1,23 +1,25 @@
 .ViewSection{
-    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+
 }
 
 .viewImg_box{
     position: relative;
-    width:250px;
+    width: 250px;
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
     border:4px solid #453c3c;
-    margin-bottom: 50px;
+    margin: 30px 0px;
 }
 
 .animal_Img{
     position: absolute;
 }
 
-img{width: 100%;}
+img{ width: 100%;}

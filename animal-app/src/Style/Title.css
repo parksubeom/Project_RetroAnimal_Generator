@@ -1,11 +1,9 @@
 .Title {
-    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
 .Title > img {
-    width: 280px;
-
+    width: 230px;
 }

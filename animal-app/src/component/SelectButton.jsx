@@ -152,10 +152,10 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
         </ul>
       </div>
-      <div className='Button_group'>
-        <button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button>
-        <button type='button' value='button' className='CreateProfile_Design' onClick={allrandomBtn}>프로필생성</button>
-      </div>
+      <ul className='lastBtn_Box'>
+        <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
+        <li><button type='button' value='button' className='CreateProfile_Design' onClick={allrandomBtn}>프로필생성</button></li>
+      </ul>
     </div>
   )
 }

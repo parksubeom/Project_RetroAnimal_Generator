@@ -15,8 +15,7 @@ module.exports.Options = [
     ,
     {
         colorselect:
-            [   
-                { key: 0, value: "민트" },
+            [
                 { key: 1, value: "베이지" },
                 { key: 2, value: "브라운" },
                 { key: 3, value: "살구" },
@@ -32,8 +31,7 @@ module.exports.Options = [
                 { key: 13, value: "코발트블루" },
                 { key: 14, value: "퍼플" },
                 { key: 15, value: "오렌지" },
-            ]
-                
+                { key: 16, value: "민트" }]
     }
     ,
     {
@@ -116,8 +114,7 @@ module.exports.Options = [
 
     }
     ,
-    {backgroundselect : [  
-        {key:1, value:"코발트블루"},
+    {backgroundselect : [       
         {key:2, value:"레드"},
         {key:3, value:"옐로우"},
         {key:4, value:"피치"},
@@ -129,6 +126,7 @@ module.exports.Options = [
         {key:10, value:"제주감귤"},
         {key:11, value:"짙은차콜"},
         {key:12, value:"아이보리"},
+        {key:13, value:"코발트블루"},
         
     ]}
 

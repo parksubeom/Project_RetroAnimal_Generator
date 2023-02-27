@@ -1,5 +1,6 @@
 .modal_section {
-    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
     top: 0;
@@ -11,92 +12,151 @@
     align-items: center;
     backdrop-filter: blur(15px);
     z-index: 9999;
+    animation: fadeIn 0.5s forwards;
 }
 
-.modal_box{
+@keyframes fadeIn {
+
+    100% {
+        opacity: 100;
+    }
+}
+
+.modal_contents {
     display: flex;
-    justify-content:center;
-    width: 500px;
-    height: 600px;
+    justify-content: center;
+    width: 400px;
+    height: 570px;
     position: relative;
 }
 
-.modal_box >.modal_totalview {  
-   position: relative;
-   overflow: hidden;
-   width:500px;
-   border: 3px solid black;
-   border-radius:15px;
+.modal_totalview {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    border: 3px solid #252222;
+    border-radius: 15px;
+
 }
 
 
-.modal_totalview >.modal_topview {
+
+
+
+
+.modal_topview {
     padding: 40px;
     background-color: #fbeddc;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
-.modal_totalview >.modal_bottomview {
+.modal_bottomview {
     padding: 40px;
     background-color: #825b47;
     height: 250px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
- h2{
-    color : #f7f1f1;
-    text-align: center;
-    text-shadow: -1px 0 #000, 0 3px #000, 4px 0 #000, 0 -1px #000;
-    font-size : 28px;
+
+
+
+
+.logo_img{
+    width: 200px;
     margin: 20px 0px;
 }
-.modal_text{
-    
-    color : #2c2b2b;
+.logo_img2{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #f7f1f1;
     text-align: center;
-    font-size : 17px;
+    -webkit-text-stroke: 2px #000;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 20px 0px;
+}
+
+.modal_text {
+    font-weight: 600;
+    color: #554545;
+    text-align: center;
+    font-size: 14px;
     word-break: keep-all;
-    letter-spacing:0.3px;
     line-height: 130%;
 }
 
-.textcolor{
-    color :  #fbeddc;
+.textcolor {
+    color: #fbeddc;
 }
+
+
+
+
+
+
+
 
 .modal_icon {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     background-image: url('https://i.imgur.com/HbHfIjy.png');
     background-size: cover;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     position: absolute;
-    top: -120px;
+    top: -90px;
     z-index: 1;
+    transform: rotate(-10deg);
+    animation: Shake 3s infinite;
 }
+
+@keyframes Shake {
+    50%{transform: rotate(5deg);}
+}
+
+
+
+
 
 .exit_button {
-    border:3px solid black;
-    border-radius:15px;
-    padding: 10px 40px;
+    position: absolute;
+    bottom: -25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #222;
+    border-radius: 50px;
     background-color: #fbeddc;
-    color : #2c2b2b;
+    color: #2c2b2b;
     text-align: center;
-    font-size : 17px;
-    margin-top: 30px;
+    font-size: 20px;
 }
 
-.exit_button:hover{
+.exit_button:hover {
     background-color: #f8c186;
-    color:#fbeddc;
+    color: #fbeddc;
 }
 
 
+.modalPattern{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-image: url(https://i.imgur.com/dBuAKhc.png);
+    opacity: 0.6;
+    z-index: 999;
+}
 
+.mtop-left{top:10px; left: 10px;}
+.mtop-right{top:10px; right: 10px; transform: rotate(90deg);}
+.mbottom-left{bottom:10px; left: 10px;transform: rotate(270deg);}
+.mbottom-right{bottom:10px; right: 10px;transform: rotate(180deg);}
