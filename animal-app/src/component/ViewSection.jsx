@@ -30,5 +30,4 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
 
   );
 }
-
 export default ViewSection;

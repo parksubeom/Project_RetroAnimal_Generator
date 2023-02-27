@@ -129,7 +129,5 @@ module.exports.Options = [
         {key:13, value:"코발트블루"},
         
     ]}
-
-
 ]
 

@@ -19,7 +19,6 @@ function Manual() {
     setAudio(!audio)
   }
 
-
   return (
     <div className='sidebutton_Group'>
       {modal ? <Modal handleOnClick={handleOnClick} /> : null}
