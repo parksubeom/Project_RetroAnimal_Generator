@@ -61,7 +61,7 @@ function Manual() {
           <div className={ audio ? 'iconON sideBtn_text' : 'iconOFF sideBtn_text'}><FontAwesomeIcon icon={faMusic} /></div>
         </div>
       </button>
-      {audio ? <audio src='./audio/mornimg.mp3' autoPlay={audio} loop="loop"></audio> : null}
+      {audio ? <audio src='./audio/lemon.mp3' autoPlay={audio} loop="loop"></audio> : null}
     </div>
   )
 }
