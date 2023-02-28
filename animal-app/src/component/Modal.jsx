@@ -38,10 +38,7 @@ function Modal({ handleOnClick }) {
                     </div>
 
                 </div>
-
-
             </div>
-
         </div>
     )
 }

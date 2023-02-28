@@ -43,3 +43,7 @@
     z-index: 999;
     transform: rotate(-45deg);
 }
+
+.sideBtn_text > img {
+    width:20px;
+}

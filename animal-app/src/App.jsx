@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Manual from './component/Manual.jsx';
-import Profile from './component/Profile.jsx';
+import Profile from 'component/profile';
 import ViewSection from './component/ViewSection.jsx';
 
 
@@ -11,8 +11,8 @@ function App() {
   const [randomcolor, setRandomColor] = useState('2')
   const [randomeyes, setRandomEyes] = useState('3')
   const [randommouth, setRandomMouth] = useState('10')
-  const [randomacc, setRandomAcc] = useState('14')
-  const [randompattern, setRandomPattern] = useState('6')
+  const [randomacc, setRandomAcc] = useState('4')
+  const [randompattern, setRandomPattern] = useState('2')
   const [randombackground, setRandombackground] = useState('12')
 
 
@@ -36,7 +36,8 @@ function App() {
       <article className='btnAllGroup__'>
         <Manual />
         <div className='profileGroup__'>
-          <Profile setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground} />
+          <Profile setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground}
+            randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground}/>
         </div>
       </article>
     </section>
