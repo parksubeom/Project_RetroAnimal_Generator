@@ -12,6 +12,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
 
   const [audio, setAudio] = useState(false)
+  const [download,setDownload] = useState(false)
   console.log(randombackground)
 
 
@@ -77,8 +78,10 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setRandombackground(e.target.value)
     }
   }
- 
+
   const onDownloadBtn = () => {
+    setDownload(!download)
+    setTimeout(() => { setDownload(false) }, 500)
     domtoimage
       .toBlob(document.querySelector('.viewImg_box'))
       .then((blob) => {
@@ -163,6 +166,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
         </ul>
       </div>
+      {download ? <audio src='./audio/camera2.wav' autoPlay={download}></audio> : null}
       <ul className='lastBtn_Box'>
         <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
         <li><button type='button' value='button' className='CreateProfile_Design' onClick={onDownloadBtn}>프로필생성</button></li>
