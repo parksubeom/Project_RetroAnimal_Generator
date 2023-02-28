@@ -1,5 +1,5 @@
 import '../Style/SelectButton.css';
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 const { Options } = require('./selectData')
@@ -11,8 +11,10 @@ const { Options } = require('./selectData')
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
   , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
 
-  const [audio, setAudio] = useState(false)
+  const [audio, setAudio] = useState(false);
+  const [flash, setFlash] = useState(false);
   const [download,setDownload] = useState(false)
+
   console.log(randombackground)
 
 
@@ -81,12 +83,15 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
   const onDownloadBtn = () => {
     setDownload(!download)
-    setTimeout(() => { setDownload(false) }, 1000)
     domtoimage
-      .toBlob(document.querySelector('.viewImg_box'))
+      .toBlob(document.querySelector('.capture-box-max'))
       .then((blob) => {
         saveAs(blob, 'anicon.png');
       });
+    setFlash(true)
+    setTimeout(() => {
+      setFlash(false)
+    }, 1000);
   };
 
 
@@ -170,6 +175,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       <ul className='lastBtn_Box'>
         <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
         <li><button type='button' value='button' className='CreateProfile_Design' onClick={onDownloadBtn}>프로필생성</button></li>
+        {flash ? <div className='flash'></div> : null}
       </ul>
     </div>
   )
