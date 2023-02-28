@@ -13,9 +13,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
   const [audio, setAudio] = useState(false);
   const [flash, setFlash] = useState(false);
-  const [download,setDownload] = useState(false)
+  const [download, setDownload] = useState(false)
 
-  console.log(randombackground)
 
 
   const faceOptions = Options[0]
@@ -28,7 +27,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
 
   const allrandomBtn = () => {
-    console.log("올 랜덤버튼 눌렸다")
     setRandomFace(Math.round(Math.random() * 8))
     setRandomColor(Math.round(Math.random() * 17))
     setRandomEyes(Math.round(Math.random() * 13))
@@ -41,7 +39,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   }
 
   const randomBtn = (setRandom) => {
-    console.log("랜덤버튼 눌렸다.")
     if (setRandom === setRandomFace) {
       setRandomFace(Math.floor(Math.random() * 8))
     } else if (setRandom === setRandomColor) {
@@ -63,7 +60,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   //==========================랜덤버튼함수==========================//
 
   const SelectBtn = (e, setSelect) => {
-    console.log("셀렉버튼 눌렸다.")
     if (setSelect === "face") {
       setRandomFace(e.target.value)
     } else if (setSelect === "color") {
