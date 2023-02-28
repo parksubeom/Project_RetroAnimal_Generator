@@ -18,15 +18,16 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
       <aside className="ViewSection">
         <div className='viewImg_box anicon '>
           <div className='capture-box'>
-            <div className="animal_Img"><img alt="face_" src={backgroundurl} /></div>
+            <div className="animal_Img"><img alt="background_" src={backgroundurl} /></div>
             <div className="animal_Img"><img alt="face_" src={faceurl} /></div>
             <div className="animal_Img"><img alt="pattern_" src={patternurl} /></div>
             <div className="animal_Img"><img alt="eyes_" src={eyesurl} /></div>
             <div className="animal_Img"><img alt="mouth_" src={mouthurl} /></div>
             <div className="animal_Img"><img alt="acc_" src={accurl} /></div>
           </div>
+          
           <div className='capture-box-max'>
-            <div className="animal_Img"><img alt="face_" src={backgroundurl} /></div>
+            <div className="animal_Img"><img alt="background_" src={backgroundurl} /></div>
             <div className="animal_Img"><img alt="face_" src={faceurl} /></div>
             <div className="animal_Img"><img alt="pattern_" src={patternurl} /></div>
             <div className="animal_Img"><img alt="eyes_" src={eyesurl} /></div>
