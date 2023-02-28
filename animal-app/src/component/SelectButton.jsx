@@ -81,7 +81,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
   const onDownloadBtn = () => {
     setDownload(!download)
-    setTimeout(() => { setDownload(false) }, 500)
+    setTimeout(() => { setDownload(false) }, 1000)
     domtoimage
       .toBlob(document.querySelector('.viewImg_box'))
       .then((blob) => {
