@@ -1,5 +1,5 @@
 import '../Style/SelectButton.css';
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 const { Options } = require('./selectData')
@@ -11,8 +11,10 @@ const { Options } = require('./selectData')
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
   , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
 
-  const [audio, setAudio] = useState(false)
-  console.log(randombackground)
+  const [audio, setAudio] = useState(false);
+  const [flash, setFlash] = useState(false);
+  const [download, setDownload] = useState(false)
+
 
 
   const faceOptions = Options[0]
@@ -25,7 +27,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
 
   const allrandomBtn = () => {
-    console.log("올 랜덤버튼 눌렸다")
     setRandomFace(Math.round(Math.random() * 8))
     setRandomColor(Math.round(Math.random() * 17))
     setRandomEyes(Math.round(Math.random() * 13))
@@ -38,7 +39,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   }
 
   const randomBtn = (setRandom) => {
-    console.log("랜덤버튼 눌렸다.")
     if (setRandom === setRandomFace) {
       setRandomFace(Math.floor(Math.random() * 8))
     } else if (setRandom === setRandomColor) {
@@ -60,7 +60,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   //==========================랜덤버튼함수==========================//
 
   const SelectBtn = (e, setSelect) => {
-    console.log("셀렉버튼 눌렸다.")
     if (setSelect === "face") {
       setRandomFace(e.target.value)
     } else if (setSelect === "color") {
@@ -77,13 +76,18 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setRandombackground(e.target.value)
     }
   }
- 
+
   const onDownloadBtn = () => {
+    setDownload(!download)
     domtoimage
-      .toBlob(document.querySelector('.viewImg_box'))
+      .toBlob(document.querySelector('.capture-box-max'))
       .then((blob) => {
         saveAs(blob, 'anicon.png');
       });
+    setFlash(true)
+    setTimeout(() => {
+      setFlash(false)
+    }, 1000);
   };
 
 
@@ -163,9 +167,11 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
         </ul>
       </div>
+      {download ? <audio src='./audio/camera2.wav' autoPlay={download}></audio> : null}
       <ul className='lastBtn_Box'>
         <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
         <li><button type='button' value='button' className='CreateProfile_Design' onClick={onDownloadBtn}>프로필생성</button></li>
+        {flash ? <div className='flash'></div> : null}
       </ul>
     </div>
   )
