@@ -22,9 +22,9 @@ function App() {
         <div className='Top_ber'></div>
         <ul>
           <li className="Pattern ptop-left"></li>
-          <li classNane="Pattern ptop-right"></li>
-          <li classNane="Pattern pbottom-left"></li>
-          <li classNane="Pattern pbottom-right"></li>
+          <li className="Pattern ptop-right"></li>
+          <li className="Pattern pbottom-left"></li>
+          <li className="Pattern pbottom-right"></li>
         </ul>
         <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} className='viewSection' />
         <footer>
