@@ -27,9 +27,15 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
 
   const allrandomBtn = () => {
-    if (randomcolor > 15 || randomeyes > 12 || randommouth > 11 || randombackground > 12) {
-      window.confirm("✨레어✨요소가 포함되어 있습니다. 바꾸시겠습니까?")
-    }
+    setTimeout(() => {
+      setDownload(false)
+      setFlash(false)
+    
+    /*if (randomcolor > 15 || randomeyes > 12 || randommouth > 10 || randombackground > 12) {
+      if (!window.confirm("✨레어✨요소가 포함되어 있습니다. 바꾸시겠습니까?")) {
+        return
+      }
+    }*/
     setRandomFace(Math.round(Math.random() * 8))
     setRandomColor(Math.round(Math.random() * 17))
     setRandomEyes(Math.round(Math.random() * 13))
@@ -38,7 +44,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     setAudio(!audio)
-    setTimeout(() => { setAudio(false) }, 300)
+    setTimeout(() => { setAudio(false) }, 300)}, 300);
   }
 
   const randomBtn = (setRandom) => {
@@ -48,19 +54,26 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
     } else if (setRandom === setRandomColor) {
       if (randomcolor > 15) {
-        window.confirm("✨레어컬러✨입니다. 바꾸시겠습니까?")
+        if (!window.confirm("✨레어컬러✨입니다. 바꾸시겠습니까?")) {
+          return
+        }
       }
       setRandomColor(Math.round(Math.random() * 17))
 
+
     } else if (setRandom === setRandomEyes) {
       if (randomeyes > 12) {
-        window.confirm("✨레어 눈✨입니다. 바꾸시겠습니까?")
+        if (!window.confirm("✨레어 눈✨입니다. 바꾸시겠습니까?")) {
+          return
+        }
       }
       setRandomEyes(Math.round(Math.random() * 13))
 
     } else if (setRandom === setRandomMouth) {
-      if (randommouth > 11) {
-        window.confirm("✨레어 입✨입니다. 바꾸시겠습니까?")
+      if (randommouth > 10) {
+        if (!window.confirm("✨레어 입✨입니다. 바꾸시겠습니까?")) {
+          return
+        }
       }
       setRandomMouth(Math.round(Math.random() * 11))
 
@@ -72,12 +85,15 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
     } else if (setRandom === setRandombackground) {
       if (randombackground > 12) {
-        window.confirm("✨레어배경✨입니다. 바꾸시겠습니까?")
+        if (!window.confirm("✨레어 배경✨입니다. 바꾸시겠습니까?")) {
+          return
+        }
       }
       setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     }
     setAudio(!audio)
-    setTimeout(() => { setAudio(false) }, 300)
+    setTimeout(() => {
+       setAudio(false) }, 1000)
   }
   //==========================랜덤버튼함수==========================//
 
@@ -118,7 +134,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
     <div className="btn_allBox">
       <div>
-        {audio ? <audio src='./audio/click_1.mp3' autoPlay={audio}></audio> : null}
+        {audio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio//click_1.mp3' autoPlay={audio}></audio> : null}
         <ul className='randomBtn_box'>
           <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomFace)}>얼굴랜덤</button></li>
           <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomColor)}>컬러랜덤</button></li>
