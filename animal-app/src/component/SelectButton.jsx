@@ -90,7 +90,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setAudio(!audio)
     setTimeout(() => {
       setAudio(false)
-    }, 1000)
+    }, 500)
   }
   //==========================랜덤버튼함수==========================//
 
