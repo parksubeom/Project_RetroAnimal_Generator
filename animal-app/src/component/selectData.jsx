@@ -3,7 +3,7 @@ module.exports.Options = [
         faceselect:
             [
                 { key: 0, value: "강아지" },
-                { key: 1, value: "강아지(큰 귀))" },
+                { key: 1, value: "강아지(큰 귀)" },
                 { key: 2, value: "강아지(접힌 귀)" },
                 { key: 3, value: "고양이(접힌 귀)" },
                 { key: 4, value: "고양이(작은 귀)" },
@@ -116,6 +116,7 @@ module.exports.Options = [
     }
     ,
     {backgroundselect : [       
+        {key:1, value:"코발트블루"},
         {key:2, value:"레드"},
         {key:3, value:"옐로우"},
         {key:4, value:"피치"},
@@ -127,7 +128,6 @@ module.exports.Options = [
         {key:10, value:"제주감귤"},
         {key:11, value:"짙은차콜"},
         {key:12, value:"아이보리"},
-        {key:13, value:"코발트블루"},
         
     ]}
 ]
