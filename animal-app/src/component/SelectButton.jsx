@@ -27,10 +27,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
 
   const allrandomBtn = () => {
-    setTimeout(() => {
-      setDownload(false)
-      setFlash(false)
-    
     /*if (randomcolor > 15 || randomeyes > 12 || randommouth > 10 || randombackground > 12) {
       if (!window.confirm("✨레어✨요소가 포함되어 있습니다. 바꾸시겠습니까?")) {
         return
@@ -44,7 +40,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     setAudio(!audio)
-    setTimeout(() => { setAudio(false) }, 300)}, 300);
+    setTimeout(() => { setAudio(false) }, 300)
   }
 
   const randomBtn = (setRandom) => {
@@ -93,7 +89,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     }
     setAudio(!audio)
     setTimeout(() => {
-       setAudio(false) }, 1000)
+      setAudio(false)
+    }, 1000)
   }
   //==========================랜덤버튼함수==========================//
 
@@ -134,7 +131,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
     <div className="btn_allBox">
       <div>
-        {audio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio//click_1.mp3' autoPlay={audio}></audio> : null}
+        {audio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/click_1.mp3' autoPlay={audio}></audio> : null}
         <ul className='randomBtn_box'>
           <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomFace)}>얼굴랜덤</button></li>
           <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomColor)}>컬러랜덤</button></li>
@@ -206,7 +203,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
         </ul>
       </div>
-      {download ? <audio src='./audio/camera2.wav' autoPlay={download}></audio> : null}
+      {download ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/camera2.wav' autoPlay={download}></audio> : null}
       <ul className='lastBtn_Box'>
         <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
         <li><button type='button' value='button' className='CreateProfile_Design' onClick={onDownloadBtn}>프로필생성</button></li>
