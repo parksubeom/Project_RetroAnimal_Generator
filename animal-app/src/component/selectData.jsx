@@ -15,7 +15,7 @@ module.exports.Options = [
     ,
     {
         colorselect:
-            [   { key: 16, value: "민트" },
+            [   { key: 0, value: "민트" },
                 { key: 1, value: "베이지" },
                 { key: 2, value: "브라운" },
                 { key: 3, value: "살구" },
