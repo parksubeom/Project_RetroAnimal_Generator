@@ -21,10 +21,10 @@ function App() {
       <article className='viewGroup__'>
         <div className='Top_ber'></div>
         <ul>
-          <li class="Pattern ptop-left"></li>
-          <li class="Pattern ptop-right"></li>
-          <li class="Pattern pbottom-left"></li>
-          <li class="Pattern pbottom-right"></li>
+          <li className="Pattern ptop-left"></li>
+          <li className="Pattern ptop-right"></li>
+          <li className="Pattern pbottom-left"></li>
+          <li className="Pattern pbottom-right"></li>
         </ul>
         <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} className='viewSection' />
         <footer>

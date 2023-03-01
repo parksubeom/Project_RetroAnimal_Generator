@@ -3,13 +3,12 @@ import Title from '../component/Title.jsx';
 
 function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
 
-  let backgroundurl = `./img/background/background${randombackground}.png`
-  let faceurl = `./img/face/face${randomface}/color${randomcolor}.png`
-  let eyesurl = `./img/eye/eye${randomeyes}.png`
-  let mouthurl = `./img/mouth/mouth${randommouth}.png`
-  let accurl = `./img/acc/acc${randomacc}.png`
-  let patternurl = `./img/pattern/pattern${randompattern}.png`
-
+  let backgroundurl = `https://mscojl24.github.io/Project_RetroAnimal_Generator/img/background/background${randombackground}.png`
+  let faceurl = `https://mscojl24.github.io/Project_RetroAnimal_Generator/img/face/face${randomface}/color${randomcolor}.png`
+  let eyesurl = `https://mscojl24.github.io/Project_RetroAnimal_Generator/img/eye/eye${randomeyes}.png`
+  let mouthurl = `https://mscojl24.github.io/Project_RetroAnimal_Generator/img/mouth/mouth${randommouth}.png`
+  let accurl = `https://mscojl24.github.io/Project_RetroAnimal_Generator/img/acc/acc${randomacc}.png`
+  let patternurl = `https://mscojl24.github.io/Project_RetroAnimal_Generator/img/pattern/pattern${randompattern}.png`
 
 
   return (
