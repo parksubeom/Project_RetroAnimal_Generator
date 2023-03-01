@@ -14,15 +14,16 @@ module.exports.Options = [
     }
     ,
     {
+
         colorselect:
-            [   { key: 0, value: "민트" },
+            [   { key: 0, value: "라이트브라운" },
                 { key: 1, value: "베이지" },
                 { key: 2, value: "브라운" },
                 { key: 3, value: "살구" },
                 { key: 4, value: "아이보리" },
                 { key: 5, value: "화이트" },
                 { key: 6, value: "차콜" },
-                { key: 7, value: "라이트브라운" },
+                { key: 7, value: "민트" },
                 { key: 8, value: "블랙" },
                 { key: 9, value: "라이트그레이" },
                 { key: 10, value: "레드" },
@@ -36,7 +37,7 @@ module.exports.Options = [
     ,
     {
         eyesselect:
-            [
+            [   { key: 0, value: "순정만화눈" },
                 { key: 1, value: "맑은눈" },
                 { key: 2, value: "화난눈" },
                 { key: 3, value: "점눈(큰)" },
