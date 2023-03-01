@@ -27,6 +27,9 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
 
 
   const allrandomBtn = () => {
+    if (randomcolor > 15 || randomeyes > 12 || randommouth > 11 || randombackground > 12) {
+      window.confirm("✨레어✨요소가 포함되어 있습니다. 바꾸시겠습니까?")
+    }
     setRandomFace(Math.round(Math.random() * 8))
     setRandomColor(Math.round(Math.random() * 17))
     setRandomEyes(Math.round(Math.random() * 13))
@@ -39,19 +42,38 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   }
 
   const randomBtn = (setRandom) => {
+
     if (setRandom === setRandomFace) {
       setRandomFace(Math.floor(Math.random() * 8))
+
     } else if (setRandom === setRandomColor) {
+      if (randomcolor > 15) {
+        window.confirm("✨레어컬러✨입니다. 바꾸시겠습니까?")
+      }
       setRandomColor(Math.round(Math.random() * 17))
+
     } else if (setRandom === setRandomEyes) {
+      if (randomeyes > 12) {
+        window.confirm("✨레어 눈✨입니다. 바꾸시겠습니까?")
+      }
       setRandomEyes(Math.round(Math.random() * 13))
+
     } else if (setRandom === setRandomMouth) {
+      if (randommouth > 11) {
+        window.confirm("✨레어 입✨입니다. 바꾸시겠습니까?")
+      }
       setRandomMouth(Math.round(Math.random() * 11))
+
     } else if (setRandom === setRandomAcc) {
       setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
+
     } else if (setRandom === setRandomPattern) {
       setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
+
     } else if (setRandom === setRandombackground) {
+      if (randombackground > 12) {
+        window.confirm("✨레어배경✨입니다. 바꾸시겠습니까?")
+      }
       setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     }
     setAudio(!audio)

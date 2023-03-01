@@ -39,9 +39,9 @@ function Manual() {
 
   return (
     <div className='sidebutton_Group'>
-      {manualsound ? <audio src='./audio/manual1.mp3' autoPlay={manualsound}></audio> : null}
+      {manualsound ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/manual1.mp3' autoPlay={manualsound}></audio> : null}
       {modal ? <Modal handleOnClick={handleOnClick} /> : null}
-      {bell ? <audio src='./audio/bell.mp3' autoPlay={bell}></audio> : null}
+      {bell ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator/audio/bell.mp3' autoPlay={bell}></audio> : null}
       <div>
         <button className='sideBtn_size' onClick={handleOnClickBell} >
           <div className='sideBtn_Design'>
@@ -61,7 +61,7 @@ function Manual() {
           <div className={ audio ? 'iconON sideBtn_text' : 'iconOFF sideBtn_text'}><FontAwesomeIcon icon={faMusic} /></div>
         </div>
       </button>
-      {audio ? <audio src='./audio/lemon.mp3' autoPlay={audio} loop="loop"></audio> : null}
+      {audio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/lemon.mp3' autoPlay={audio} loop="loop"></audio> : null}
     </div>
   )
 }
