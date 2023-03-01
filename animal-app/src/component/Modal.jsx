@@ -18,14 +18,14 @@ function Modal({ handleOnClick }) {
                     <div className="modal_topview">
                         <img className="logo_img" src="https://i.imgur.com/iLtMaIJ.png" />
                         <p className="modal_text">자신의 개성을 보여 줄 나만의 친구들을 가지고싶지 않나요?
-                            ANISCHOOL는 다양하고 귀여운 나만의 애니콘을 자신만의
+                            ANISCHOOL은 다양하고 귀여운 나만의 애니콘을 자신만의
                             개성으로 직접 커스터마이징 가능한 프로필아이콘을 제공합니다.
                             <br /><br />
                             <h3>한번 이용시 1000원이라는 저렴한 가격!</h3>
                             <br />
                             하지만 돈이 부담되신다구요?<br />
                             가난한 부트캠프 수강생이시라구요?<br />
-                            정말 돈이없으시다면 따뜻한 리뷰로 대체가능합니다.
+                            정말 돈이 없으시다면 따뜻한 리뷰로 대체가능합니다.
                         </p>
                     </div >
                     <div className="modal_bottomview">{/*모달 바텀뷰*/}

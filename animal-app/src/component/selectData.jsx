@@ -108,7 +108,7 @@ module.exports.Options = [
             { key: 0, value: "무늬x" },
             { key: 1, value: "칼자국 흉터" },
             { key: 2, value: "발그레" },
-            { key: 3, value: "범피스트" },
+            { key: 3, value: "호랑이" },
             { key: 4, value: "해리포터 번개" },
             { key: 5, value: "사고뭉치" },
             { key: 6, value: "주근깨" }]
