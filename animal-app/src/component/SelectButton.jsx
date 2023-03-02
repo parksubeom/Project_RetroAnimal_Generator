@@ -1,5 +1,7 @@
 import '../Style/SelectButton.css';
 import React, { useState, useRef } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faLock, faUnlock} from "@fortawesome/free-solid-svg-icons"
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 const { Options } = require('./selectData')
@@ -9,12 +11,20 @@ const { Options } = require('./selectData')
 //셀렉트버튼 컴포넌트는 뷰 컴포넌트의 자식컴포넌트로 들어가지 않으니까 state & props로 값을 주고받기 힘들다. => App.jsx로 값을 올려보낸다.
 
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
-  , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground,setSectionFlash1 }) {
+  , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground, setSectionFlash1 }) {
 
   const [audio, setAudio] = useState(false);
   const [flash, setFlash] = useState(false);
   const [download, setDownload] = useState(false)
   const [pngname, setPngName] = useState('')
+  const [facelock, setFaceLock] = useState(true)
+  const [colorlock, setColorLock] = useState(true)
+  const [eyeslock, setEyesLock] = useState(true)
+  const [mouthlock, setMouthLock] = useState(true)
+  const [acclock, setAccLock] = useState(true)
+  const [patternlock, setPatternLock] = useState(true)
+  const [backgroundlock, setBackgroundLock] = useState(true)
+
 
 
 
@@ -33,23 +43,37 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
         return
       }
     }*/
-    setRandomFace(Math.round(Math.random() * 8))
-    setRandomColor(Math.round(Math.random() * 17))
-    setRandomEyes(Math.round(Math.random() * 13))
-    setRandomMouth(Math.round(Math.random() * 11))
-    setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
-    setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
-    setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
+    if(facelock){
+      setRandomFace(Math.round(Math.random() * 8))
+    }
+    if(colorlock){
+      setRandomColor(Math.round(Math.random() * 17))
+    }
+    if(eyeslock){
+      setRandomEyes(Math.round(Math.random() * 13))
+    }
+    if(mouthlock){
+      setRandomMouth(Math.round(Math.random() * 11))
+    }
+    if(acclock){
+      setRandomAcc(Math.round(Math.random() * (30 - 1)) + 1)
+    }
+    if(patternlock){
+      setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
+    }
+    if(backgroundlock){
+      setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
+    }
     setAudio(!audio)
     setSectionFlash1(true)
-    setTimeout(() => { 
-      setSectionFlash1(false) 
+    setTimeout(() => {
+      setSectionFlash1(false)
     }, 300)
-    setTimeout(() => { 
+    setTimeout(() => {
       setAudio(false)
     }, 300)
   }
-
+//==========================랜덤버튼함수==========================//
   const randomBtn = (setRandom) => {
 
     if (setRandom === setRandomFace) {
@@ -99,8 +123,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setAudio(false)
     }, 500)
   }
-  //==========================랜덤버튼함수==========================//
-
+   //==========================셀렉버튼함수==========================//
   const SelectBtn = (e, setSelect) => {
     if (setSelect === "face") {
       setRandomFace(e.target.value)
@@ -118,11 +141,11 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setRandombackground(e.target.value)
     }
   }
-
+ //==========================png파일명 생성 함수==========================//
   const pngnameHandler = (e) => {
     setPngName(e.target.value)
   }
-
+//==========================캐릭터내려받기 함수 및 플래쉬==========================//
   const onDownloadBtn = () => {
     setDownload(!download)
     domtoimage
@@ -135,9 +158,36 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setDownload(false)
       setFlash(false)
     }, 1000);
+    setPngName('')
   };
-
+//==========================올랜덤 잠금버튼 함수==========================//
+const randomLockBtn = (e,locktype) => {
+  console.log("락버튼눌림")
+  if(locktype === "face"){
+    setFaceLock(!facelock)
+  }
+  else if(locktype === "color"){
+    setColorLock(!colorlock)
+  }
+  else if(locktype === "eyes"){
+    setEyesLock(!eyeslock)
+  }
+  else if(locktype === "mouth"){
+    setMouthLock(!mouthlock)
+  }
+  else if(locktype === "acc"){
+    setAccLock(!acclock)
+  }
+  else if(locktype === "pattern"){
+    setPatternLock(!patternlock)
+  }
+  else if(locktype === "background"){
+    setBackgroundLock(!backgroundlock)
+  }
   
+  
+  
+}
 
 
   return (
@@ -154,8 +204,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
           <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandomPattern)}>무늬랜덤</button></li>
           <li><button type='button' value='button' className='randomBtn_Design' onClick={() => randomBtn(setRandombackground)}>배경 랜덤</button></li>
         </ul>
+        
         <ul className='selectBtn_box'>
-
           <li>
             <select className='selectBtn_Design' onChange={(event) => SelectBtn(event, "face")} value={randomface}>
               {faceOptions.faceselect.map((item) => (<option key={item.key} value={item.key}>{item.value}</option>))}
@@ -213,11 +263,18 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}</select>
           </li>
-            
-          <input id="pngname" className='png_Name' placeholder='✨저장 할 이름 작성✨' onChange={(e) => pngnameHandler(e)}></input>
-
+        </ul>
+        <ul className='lockBtn_box'>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"face")}>{facelock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"color")}>{colorlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"eyes")}>{eyeslock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"mouth")}>{mouthlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"acc")}>{acclock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"pattern")}>{patternlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
+          <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"background")}>{backgroundlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
         </ul>
       </div>
+      <input id="pngname" className='png_Name' placeholder='저장 할 이름 작성' value={pngname} onChange={(e) => pngnameHandler(e)}></input>
       {download ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/camera2.wav' autoPlay={download}></audio> : null}
       <ul className='lastBtn_Box'>
         <li><button type='button' value='button' className='AllRandomBtn_Design' onClick={allrandomBtn}>올 랜덤</button></li>
