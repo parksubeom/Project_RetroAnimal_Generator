@@ -13,18 +13,15 @@ function Manual() {
   const [manualsound,setManualSound] = useState(false)
 
   const handleOnClick = () => {
-    console.log('모달버튼 클릭')
     setModal(!modal);
   }
 
   const handleOnClick2 = () => {
-    console.log('모달버튼 클릭')
     setManualSound(!manualsound)
     setTimeout(() => { setManualSound(false) }, 800)
   }
 
   const handleOnClickBell = () => {
-    console.log('모달버튼 클릭')
     setModal(!modal);
     setBell(!bell);
     setTimeout(() => {
