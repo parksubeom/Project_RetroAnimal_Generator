@@ -7,10 +7,10 @@ function Modal({ handleOnClick }) {
         <div className="modal_section">{/*모달 백그라운드*/}
             <div className="modal_contents">{/*모달 컨텐츠*/}
                 <ul>
-                    <li class="modalPattern mtop-left"></li>
-                    <li class="modalPattern mtop-right"></li>
-                    <li class="modalPattern mbottom-left"></li>
-                    <li class="modalPattern mbottom-right"></li>
+                    <li className="modalPattern mtop-left"></li>
+                    <li className="modalPattern mtop-right"></li>
+                    <li className="modalPattern mbottom-left"></li>
+                    <li className="modalPattern mbottom-right"></li>
                 </ul>
                 <div className="modal_icon"></div> {/*모달 상단 범 아이콘*/}
                 <button className="exit_button" onClick={handleOnClick}>×</button>{/*모달 닫기버튼*/}

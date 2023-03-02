@@ -163,6 +163,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   };
 //==========================올랜덤 잠금버튼 함수==========================//
 const randomLockBtn = (e,locktype) => {
+  setLockAudio(!lockaudio)
   if(locktype === "face"){
     setFaceLock(!facelock)
   }
@@ -184,7 +185,11 @@ const randomLockBtn = (e,locktype) => {
   else if(locktype === "background"){
     setBackgroundLock(!backgroundlock)
   }
-  setLockAudio(!lockaudio)
+  setTimeout(() => {
+    setLockAudio(false)
+  }, 200)
+  
+  
 
   
 }
@@ -264,8 +269,8 @@ const randomLockBtn = (e,locktype) => {
               ))}</select>
           </li>
         </ul>
+        {lockaudio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/lock.mp3' autoPlay={lockaudio}></audio> : null}
         <ul className='lockBtn_box'>
-          {lockaudio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/click_1.mp3' autoPlay={lockaudio}></audio> : null}
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"face")}>{facelock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"color")}>{colorlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"eyes")}>{eyeslock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>

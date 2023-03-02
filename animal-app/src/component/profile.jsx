@@ -11,10 +11,10 @@ function Profile({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth,
                     <div className='clip-top'></div>
                 </aside>
                 <ul>
-                    <li class="Screw top-left">×</li>
-                    <li class="Screw top-right">×</li>
-                    <li class="Screw bottom-left">×</li>
-                    <li class="Screw bottom-right">×</li>
+                    <li className="Screw top-left">×</li>
+                    <li className="Screw top-right">×</li>
+                    <li className="Screw bottom-left">×</li>
+                    <li className="Screw bottom-right">×</li>
                 </ul>
                 <div className='profilePaper-group'>
                     <SelectButton setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground}
