@@ -12,7 +12,7 @@ const { Options } = require('./selectData')
 
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
   , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground, setSectionFlash1 }) {
-
+  const [lockaudio, setLockAudio]=useState(false)
   const [audio, setAudio] = useState(false);
   const [flash, setFlash] = useState(false);
   const [download, setDownload] = useState(false)
@@ -162,7 +162,6 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   };
 //==========================올랜덤 잠금버튼 함수==========================//
 const randomLockBtn = (e,locktype) => {
-  console.log("락버튼눌림")
   if(locktype === "face"){
     setFaceLock(!facelock)
   }
@@ -184,9 +183,7 @@ const randomLockBtn = (e,locktype) => {
   else if(locktype === "background"){
     setBackgroundLock(!backgroundlock)
   }
-  
-  
-  
+  setLockAudio(!lockaudio)
 }
 
 
@@ -265,6 +262,7 @@ const randomLockBtn = (e,locktype) => {
           </li>
         </ul>
         <ul className='lockBtn_box'>
+          {lockaudio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/.mp3' autoPlay={lockaudio}></audio> : null}
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"face")}>{facelock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"color")}>{colorlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"eyes")}>{eyeslock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
