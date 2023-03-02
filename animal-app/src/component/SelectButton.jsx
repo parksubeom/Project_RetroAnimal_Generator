@@ -9,7 +9,7 @@ const { Options } = require('./selectData')
 //셀렉트버튼 컴포넌트는 뷰 컴포넌트의 자식컴포넌트로 들어가지 않으니까 state & props로 값을 주고받기 힘들다. => App.jsx로 값을 올려보낸다.
 
 function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
-  , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
+  , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground,setSectionFlash1 }) {
 
   const [audio, setAudio] = useState(false);
   const [flash, setFlash] = useState(false);
@@ -40,7 +40,13 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setRandomPattern(Math.round(Math.random() * (6 - 1)) + 1)
     setRandombackground(Math.round(Math.random() * (19 - 1)) + 1)
     setAudio(!audio)
-    setTimeout(() => { setAudio(false) }, 300)
+    setSectionFlash1(true)
+    setTimeout(() => { 
+      setSectionFlash1(false) 
+    }, 300)
+    setTimeout(() => { 
+      setAudio(false)
+    }, 300)
   }
 
   const randomBtn = (setRandom) => {

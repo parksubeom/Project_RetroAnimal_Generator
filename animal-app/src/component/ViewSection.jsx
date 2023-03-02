@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
 import '../Style/ViewSection.css';
 import Title from '../component/Title.jsx';
 
-function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
+function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground, sectionflash }) {
 
   let backgroundurl = `https://parksubeom.github.io/Project_RetroAnimal_Generator/img//background/background${randombackground}.png`
   let faceurl = `https://parksubeom.github.io/Project_RetroAnimal_Generator/img//face/face${randomface}/color${randomcolor}.png`
@@ -13,11 +14,12 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
 
 
   return (
-    
+
     <div>
       <aside className="ViewSection">
         <div className='viewImg_box anicon '>
           <div className='capture-box'>
+            {sectionflash ? <div className='flash1'></div> : null}
             <div className="animal_Img"><img alt="background_" src={backgroundurl} /></div>
             <div className="animal_Img"><img alt="face_" src={faceurl} /></div>
             <div className="animal_Img"><img alt="pattern_" src={patternurl} /></div>
@@ -25,7 +27,7 @@ function ViewSection({ randomface, randomcolor, randomeyes, randommouth, randoma
             <div className="animal_Img"><img alt="mouth_" src={mouthurl} /></div>
             <div className="animal_Img"><img alt="acc_" src={accurl} /></div>
           </div>
-          
+
           <div className='capture-box-max'>
             <div className="animal_Img"><img alt="background_" src={backgroundurl} /></div>
             <div className="animal_Img"><img alt="face_" src={faceurl} /></div>
