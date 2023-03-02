@@ -16,8 +16,13 @@
     top:0px;
     left: 0px;
     z-index: 99;
-    background-color:#fbeddc
+    background-image: url("https://img.freepik.com/free-vector/sparkling-sunrise-light-effect_23-2148365832.jpg");
+    background-position: center;
+    animation: opacity 2s forwards;
+    
 }
+
+
 
 .viewImg_box{
     position: relative;

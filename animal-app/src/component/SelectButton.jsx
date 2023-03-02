@@ -43,6 +43,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
         return
       }
     }*/
+   
     if(facelock){
       setRandomFace(Math.round(Math.random() * 8))
     }
@@ -68,7 +69,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     setSectionFlash1(true)
     setTimeout(() => {
       setSectionFlash1(false)
-    }, 300)
+    }, 500)
     setTimeout(() => {
       setAudio(false)
     }, 300)
@@ -184,6 +185,8 @@ const randomLockBtn = (e,locktype) => {
     setBackgroundLock(!backgroundlock)
   }
   setLockAudio(!lockaudio)
+
+  
 }
 
 
@@ -262,7 +265,7 @@ const randomLockBtn = (e,locktype) => {
           </li>
         </ul>
         <ul className='lockBtn_box'>
-          {lockaudio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/.mp3' autoPlay={lockaudio}></audio> : null}
+          {lockaudio ? <audio src='https://parksubeom.github.io/Project_RetroAnimal_Generator//audio/click_1.mp3' autoPlay={lockaudio}></audio> : null}
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"face")}>{facelock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"color")}>{colorlock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
           <li><button type='button' value='button' className='lockBtn_Design' onClick={(e) => randomLockBtn(e,"eyes")}>{eyeslock?<FontAwesomeIcon icon={faUnlock}/>:<FontAwesomeIcon icon={faLock}/>}</button></li>
