@@ -14,6 +14,7 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
   const [audio, setAudio] = useState(false);
   const [flash, setFlash] = useState(false);
   const [download, setDownload] = useState(false)
+  const [pngname, setPngName] = useState('')
 
 
 
@@ -118,12 +119,16 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
     }
   }
 
+  const pngnameHandler = (e) => {
+    setPngName(e.target.value)
+  }
+
   const onDownloadBtn = () => {
     setDownload(!download)
     domtoimage
       .toBlob(document.querySelector('.capture-box-max'))
       .then((blob) => {
-        saveAs(blob, 'anicon.png');
+        saveAs(blob, `${pngname}.png`);
       });
     setFlash(true)
     setTimeout(() => {
@@ -131,6 +136,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
       setFlash(false)
     }, 1000);
   };
+
+  
 
 
   return (
@@ -206,6 +213,8 @@ function SelectButton({ setRandomFace, setRandomColor, setRandomEyes, setRandomM
                 <option key={item.key} value={item.key}>{item.value}</option>
               ))}</select>
           </li>
+            
+          <input id="pngname" className='png_Name' placeholder='✨저장 할 이름 작성✨' onChange={(e) => pngnameHandler(e)}></input>
 
         </ul>
       </div>

@@ -82,7 +82,7 @@ module.exports.Options = [
         {key:11, value:"빨간리본"},
         {key:12, value:"뿌애애앵 "},
         {key:13, value:"반짝이는 눈"},
-        {key:14, value:"짜바게티 요리사"},
+        {key:14, value:"짜빠게티 요리사"},
         {key:15, value:"버버리마스크"},
         {key:16, value:"제주감귤"},
         {key:17, value:"나뭇잎 하나"},
