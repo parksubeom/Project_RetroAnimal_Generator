@@ -14,7 +14,8 @@ function App() {
   const [randomacc, setRandomAcc] = useState('19')
   const [randompattern, setRandomPattern] = useState('6')
   const [randombackground, setRandombackground] = useState('12')
-
+  const [sectionflash , setSectionFlash1] = useState(false);
+  console.log(sectionflash)
 
   return (
     <section className='App'>
@@ -26,7 +27,7 @@ function App() {
           <li className="Pattern pbottom-left"></li>
           <li className="Pattern pbottom-right"></li>
         </ul>
-        <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} className='viewSection' />
+        <ViewSection randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} sectionflash={sectionflash} className='viewSection' />
         <footer>
           <p>본 프로젝트는 수범,주비의 공동작품입니다.<br />
             페이지내에 사용된 모든 이미지들의<br />
@@ -37,7 +38,7 @@ function App() {
         <Manual />
         <div className='profileGroup__'>
           <Profile setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground}
-            randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground}/>
+            randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} setSectionFlash1={setSectionFlash1}/>
         </div>
       </article>
     </section>

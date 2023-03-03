@@ -1,7 +1,7 @@
 import '../Style/Profile.css';
 import SelectButton from '../component/SelectButton.jsx';
 function Profile({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth, setRandomAcc, setRandomPattern, setRandombackground
-    , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground }) {
+    , randomface, randomcolor, randomeyes, randommouth, randomacc, randompattern, randombackground, setSectionFlash1 }) {
 
     return (
         <>
@@ -18,7 +18,7 @@ function Profile({ setRandomFace, setRandomColor, setRandomEyes, setRandomMouth,
                 </ul>
                 <div className='profilePaper-group'>
                     <SelectButton setRandomFace={setRandomFace} setRandomColor={setRandomColor} setRandomEyes={setRandomEyes} setRandomMouth={setRandomMouth} setRandomAcc={setRandomAcc} setRandomPattern={setRandomPattern} setRandombackground={setRandombackground}
-                        randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} />
+                        randomface={randomface} randomcolor={randomcolor} randomeyes={randomeyes} randommouth={randommouth} randomacc={randomacc} randompattern={randompattern} randombackground={randombackground} setSectionFlash1 ={setSectionFlash1} />
                 </div>
             </section>
         </>

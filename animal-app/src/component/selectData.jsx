@@ -14,16 +14,16 @@ module.exports.Options = [
     }
     ,
     {
+
         colorselect:
-            [
-                { key: 0, value: "민트" },
+            [   { key: 0, value: "라이트브라운" },
                 { key: 1, value: "베이지" },
                 { key: 2, value: "브라운" },
                 { key: 3, value: "살구" },
                 { key: 4, value: "아이보리" },
                 { key: 5, value: "화이트" },
                 { key: 6, value: "차콜" },
-                { key: 7, value: "라이트브라운" },
+                { key: 7, value: "민트" },
                 { key: 8, value: "블랙" },
                 { key: 9, value: "라이트그레이" },
                 { key: 10, value: "레드" },
@@ -37,7 +37,7 @@ module.exports.Options = [
     ,
     {
         eyesselect:
-            [
+            [   { key: 0, value: "순정만화눈" },
                 { key: 1, value: "맑은눈" },
                 { key: 2, value: "화난눈" },
                 { key: 3, value: "점눈(큰)" },
@@ -82,7 +82,7 @@ module.exports.Options = [
         {key:11, value:"빨간리본"},
         {key:12, value:"뿌애애앵 "},
         {key:13, value:"반짝이는 눈"},
-        {key:14, value:"짜바게티 요리사"},
+        {key:14, value:"짜빠게티 요리사"},
         {key:15, value:"버버리마스크"},
         {key:16, value:"제주감귤"},
         {key:17, value:"나뭇잎 하나"},
@@ -108,15 +108,15 @@ module.exports.Options = [
             { key: 0, value: "무늬x" },
             { key: 1, value: "칼자국 흉터" },
             { key: 2, value: "발그레" },
-            { key: 3, value: "범피스트" },
+            { key: 3, value: "호랑이" },
             { key: 4, value: "해리포터 번개" },
             { key: 5, value: "사고뭉치" },
             { key: 6, value: "주근깨" }]
 
     }
     ,
-    {backgroundselect : [       
-        {key:1, value:"코발트블루"},
+    {backgroundselect : [     
+        {key:1, value:"코발트블루"} , 
         {key:2, value:"레드"},
         {key:3, value:"옐로우"},
         {key:4, value:"피치"},
@@ -127,8 +127,7 @@ module.exports.Options = [
         {key:9, value:"그린티"},
         {key:10, value:"제주감귤"},
         {key:11, value:"짙은차콜"},
-        {key:12, value:"아이보리"},
-        
+        {key:12, value:"아이보리"}  
     ]}
 ]
 
