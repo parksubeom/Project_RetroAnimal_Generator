@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Project_RetroAnimal_Generator/static/css/main.d6397c5a.css",
-    "main.js": "/Project_RetroAnimal_Generator/static/js/main.cc42402f.js",
+    "main.css": "/Project_RetroAnimal_Generator/static/css/main.c3da86ed.css",
+    "main.js": "/Project_RetroAnimal_Generator/static/js/main.c1696ff7.js",
     "static/media/CookieRun Black.ttf": "/Project_RetroAnimal_Generator/static/media/CookieRun Black.00ee0089b5b041ab4237.ttf",
     "static/media/Maplestory Bold.ttf": "/Project_RetroAnimal_Generator/static/media/Maplestory Bold.e39287220e971b277c0e.ttf",
     "static/media/pen.cur": "/Project_RetroAnimal_Generator/static/media/pen.c56291f10e01824520e0.cur",
     "index.html": "/Project_RetroAnimal_Generator/index.html",
-    "main.d6397c5a.css.map": "/Project_RetroAnimal_Generator/static/css/main.d6397c5a.css.map",
-    "main.cc42402f.js.map": "/Project_RetroAnimal_Generator/static/js/main.cc42402f.js.map"
+    "main.c3da86ed.css.map": "/Project_RetroAnimal_Generator/static/css/main.c3da86ed.css.map",
+    "main.c1696ff7.js.map": "/Project_RetroAnimal_Generator/static/js/main.c1696ff7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6397c5a.css",
-    "static/js/main.cc42402f.js"
+    "static/css/main.c3da86ed.css",
+    "static/js/main.c1696ff7.js"
   ]
 }
