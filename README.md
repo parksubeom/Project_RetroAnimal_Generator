@@ -32,7 +32,7 @@ Ani School은 여러분의 기여를 환영합니다! 버그를 발견하거나 
 
 ## 라이센스
 
-이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 [라이센스 파일](LICENSE)을 참조하세요.
+이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 [라이센스 파일](https://github.com/parksubeom/Project_RetroAnimal_Generator/blob/parksubeom/LICENSE)을 참조하세요.
 
 ---
 
