@@ -22,7 +22,7 @@ Ani School은 아기자기한 동물 캐릭터 프로필 이미지를 쉽게 생
 
 ## 예시
 
-![image](https://blog.kakaocdn.net/dn/b0tKwq/btr2aHD5gty/jJpCq5h0UMyWn3gtQVERdk/img.gif)
+![image](https://github.com/parksubeom/Project_RetroAnimal_Generator/assets/104641096/bb3e9a89-623f-4456-8a7b-bffa4bbc922c)
 
 
 
