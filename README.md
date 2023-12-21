@@ -1,4 +1,5 @@
 # 캐릭터 생성 서비스 - Ani School
+
 Ani School은 아기자기한 동물 캐릭터 프로필 이미지를 쉽게 생성하고 사용자에게 전달할 수 있는 서비스입니다. 이 서비스를 사용하여 당신의 프로필을 귀여운 동물 캐릭터로 꾸며보세요!
 
 ## 특징
@@ -21,8 +22,8 @@ Ani School은 아기자기한 동물 캐릭터 프로필 이미지를 쉽게 생
 
 ## 예시
 
-![![image](https://github.com/parksubeom/Project_RetroAnimal_Generator/assets/104641096/b760a27c-4b0b-499a-8777-edcbf632431e)
-)
+[image](https://github.com/parksubeom/Project_RetroAnimal_Generator/assets/104641096/b760a27c-4b0b-499a-8777-edcbf632431e)
+
 
 ## 기여 및 문제 보고
 
