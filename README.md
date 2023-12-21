@@ -22,7 +22,8 @@ Ani School은 아기자기한 동물 캐릭터 프로필 이미지를 쉽게 생
 
 ## 예시
 
-[image](https://github.com/parksubeom/Project_RetroAnimal_Generator/assets/104641096/b760a27c-4b0b-499a-8777-edcbf632431e)
+![image](https://github.com/parksubeom/Project_RetroAnimal_Generator/assets/104641096/b328f19a-96a0-43f6-801b-c2dfb950a77e)
+
 
 
 ## 기여 및 문제 보고
